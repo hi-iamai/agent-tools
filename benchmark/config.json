@@ -1,0 +1,12 @@
+{
+  "repo_name": "django",
+  "repo_url": "https://github.com/django/django.git",
+  "repo_commit": "5e32c82a5a896e1d942cfc9dd9a2ebbe86741258",
+  "repo_path": "benchmark/repos/django",
+  "assignment_seed": 20260728,
+  "tool_output_max_chars": 24000,
+  "max_agent_turns": 12,
+  "max_tool_calls": 10,
+  "max_output_tokens": 1800,
+  "task_timeout_seconds": 240
+}

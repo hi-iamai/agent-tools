@@ -1,0 +1,16 @@
+﻿surface,category,runs,success_rate,mean_score
+dedicated,edge,2,1.0,1.0
+dedicated,multi_step,6,0.6666666666666666,0.8888888888888888
+dedicated,path,4,1.0,1.0
+dedicated,regex,4,1.0,1.0
+dedicated,text,8,1.0,1.0
+router,edge,2,1.0,1.0
+router,multi_step,6,0.0,0.0
+router,path,4,1.0,1.0
+router,regex,4,0.0,0.0
+router,text,8,0.75,0.75
+shell,edge,2,1.0,1.0
+shell,multi_step,6,0.3333333333333333,0.4444444444444444
+shell,path,4,1.0,1.0
+shell,regex,4,1.0,1.0
+shell,text,8,0.75,0.9166666666666666

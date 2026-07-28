@@ -1,0 +1,15 @@
+{
+  "timestamp_utc": "2026-07-28T12:44:43Z",
+  "platform": "Windows-2025Server-10.0.26100-SP0",
+  "processor": "AMD64 Family 26 Model 0 Stepping 0, AuthenticAMD",
+  "python": "3.12.10",
+  "versions": {
+    "git": "git version 2.55.0.windows.3",
+    "rg": "ripgrep 15.2.0 (rev e89fff89ac)",
+    "python": "Python 3.12.10",
+    "node": "v24.18.0",
+    "ast_grep": "ast-grep 0.45.0"
+  },
+  "repo_commit": "5e32c82a5a896e1d942cfc9dd9a2ebbe86741258",
+  "tracked_files": 7077
+}

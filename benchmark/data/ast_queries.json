@@ -1,0 +1,17 @@
+[
+  {
+    "id": "ast_async_methods",
+    "language": "python",
+    "pattern": "async def $F($$$ARGS): $$$BODY"
+  },
+  {
+    "id": "ast_classes",
+    "language": "python",
+    "pattern": "class $C($$$BASE): $$$BODY"
+  },
+  {
+    "id": "ast_get_user_calls",
+    "language": "python",
+    "pattern": "get_user_model()"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "files_py",
+    "kind": "files",
+    "pattern": "*.py"
+  },
+  {
+    "id": "files_tests_urls",
+    "kind": "files",
+    "pattern": "tests/urls_tests/**/urls.py"
+  },
+  {
+    "id": "files_cache",
+    "kind": "files",
+    "pattern": "django/core/cache/backends/*.py"
+  },
+  {
+    "id": "text_queryset",
+    "kind": "text",
+    "query": "class QuerySet"
+  },
+  {
+    "id": "text_removed",
+    "kind": "text",
+    "query": "RemovedInDjango71Warning"
+  },
+  {
+    "id": "text_get_user_model",
+    "kind": "text",
+    "query": "get_user_model"
+  },
+  {
+    "id": "regex_async",
+    "kind": "regex",
+    "query": "^\\s+async def a\\w+\\("
+  },
+  {
+    "id": "regex_class",
+    "kind": "regex",
+    "query": "^class (HttpResponse|URLResolver|QuerySet|Model|BaseCache)\\b"
+  },
+  {
+    "id": "no_hit",
+    "kind": "text",
+    "query": "QuantumCacheTeleport"
+  },
+  {
+    "id": "broad_import",
+    "kind": "text",
+    "query": "from django."
+  }
+]

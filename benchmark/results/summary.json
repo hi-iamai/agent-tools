@@ -1,0 +1,221 @@
+{
+  "microbench": [
+    {
+      "kind": "files",
+      "backend": "git",
+      "runs": 36,
+      "median_ms": 61.76414999936242,
+      "p95_ms": 83.5085499966226,
+      "median_results": 8.0,
+      "median_output_bytes": 323877.0
+    },
+    {
+      "kind": "files",
+      "backend": "rg",
+      "runs": 36,
+      "median_ms": 56.87809999653837,
+      "p95_ms": 71.02077499439474,
+      "median_results": 8.0,
+      "median_output_bytes": 296.0
+    },
+    {
+      "kind": "regex",
+      "backend": "git",
+      "runs": 24,
+      "median_ms": 180.1144499986549,
+      "p95_ms": 303.89126000300155,
+      "median_results": 138.0,
+      "median_output_bytes": 11380.5
+    },
+    {
+      "kind": "regex",
+      "backend": "rg",
+      "runs": 24,
+      "median_ms": 182.02290000772336,
+      "p95_ms": 249.73300500860196,
+      "median_results": 138.0,
+      "median_output_bytes": 11380.5
+    },
+    {
+      "kind": "structural",
+      "backend": "ast_grep",
+      "runs": 36,
+      "median_ms": 720.3309000033187,
+      "p95_ms": 1303.8785250064393,
+      "median_results": 793.0,
+      "median_output_bytes": 1603458.0
+    },
+    {
+      "kind": "structural",
+      "backend": "rg_seed",
+      "runs": 36,
+      "median_ms": 105.42625000380212,
+      "p95_ms": 131.10242500624736,
+      "median_results": 793.0,
+      "median_output_bytes": 65533.0
+    },
+    {
+      "kind": "text",
+      "backend": "git",
+      "runs": 60,
+      "median_ms": 178.71444999764208,
+      "p95_ms": 252.75876499799773,
+      "median_results": 20.0,
+      "median_output_bytes": 1845.0
+    },
+    {
+      "kind": "text",
+      "backend": "rg",
+      "runs": 60,
+      "median_ms": 181.46079999860376,
+      "p95_ms": 234.63236999959912,
+      "median_results": 20.0,
+      "median_output_bytes": 1845.0
+    }
+  ],
+  "agent": [
+    {
+      "surface": "dedicated",
+      "runs": 24,
+      "success_rate": 0.9166666666666666,
+      "mean_score": 0.9722222222222222,
+      "median_duration_ms": 12524.5578499962,
+      "p95_duration_ms": 27021.45289500112,
+      "median_tool_calls": 2.5,
+      "median_input_tokens": 4874.5,
+      "median_cost_usd": 0.0267915,
+      "infrastructure_errors": 0
+    },
+    {
+      "surface": "router",
+      "runs": 24,
+      "success_rate": 0.5,
+      "mean_score": 0.5,
+      "median_duration_ms": 18426.765649994195,
+      "p95_duration_ms": 37100.137670002005,
+      "median_tool_calls": 5.5,
+      "median_input_tokens": 9664.5,
+      "median_cost_usd": 0.0463785,
+      "infrastructure_errors": 0
+    },
+    {
+      "surface": "shell",
+      "runs": 24,
+      "success_rate": 0.75,
+      "mean_score": 0.8333333333333334,
+      "median_duration_ms": 14007.882350000727,
+      "p95_duration_ms": 29936.975244996567,
+      "median_tool_calls": 3.0,
+      "median_input_tokens": 4353.0,
+      "median_cost_usd": 0.023802000000000004,
+      "infrastructure_errors": 0
+    }
+  ],
+  "agent_by_category": [
+    {
+      "surface": "dedicated",
+      "category": "edge",
+      "runs": 2,
+      "success_rate": 1.0,
+      "mean_score": 1.0
+    },
+    {
+      "surface": "dedicated",
+      "category": "multi_step",
+      "runs": 6,
+      "success_rate": 0.6666666666666666,
+      "mean_score": 0.8888888888888888
+    },
+    {
+      "surface": "dedicated",
+      "category": "path",
+      "runs": 4,
+      "success_rate": 1.0,
+      "mean_score": 1.0
+    },
+    {
+      "surface": "dedicated",
+      "category": "regex",
+      "runs": 4,
+      "success_rate": 1.0,
+      "mean_score": 1.0
+    },
+    {
+      "surface": "dedicated",
+      "category": "text",
+      "runs": 8,
+      "success_rate": 1.0,
+      "mean_score": 1.0
+    },
+    {
+      "surface": "router",
+      "category": "edge",
+      "runs": 2,
+      "success_rate": 1.0,
+      "mean_score": 1.0
+    },
+    {
+      "surface": "router",
+      "category": "multi_step",
+      "runs": 6,
+      "success_rate": 0.0,
+      "mean_score": 0.0
+    },
+    {
+      "surface": "router",
+      "category": "path",
+      "runs": 4,
+      "success_rate": 1.0,
+      "mean_score": 1.0
+    },
+    {
+      "surface": "router",
+      "category": "regex",
+      "runs": 4,
+      "success_rate": 0.0,
+      "mean_score": 0.0
+    },
+    {
+      "surface": "router",
+      "category": "text",
+      "runs": 8,
+      "success_rate": 0.75,
+      "mean_score": 0.75
+    },
+    {
+      "surface": "shell",
+      "category": "edge",
+      "runs": 2,
+      "success_rate": 1.0,
+      "mean_score": 1.0
+    },
+    {
+      "surface": "shell",
+      "category": "multi_step",
+      "runs": 6,
+      "success_rate": 0.3333333333333333,
+      "mean_score": 0.4444444444444444
+    },
+    {
+      "surface": "shell",
+      "category": "path",
+      "runs": 4,
+      "success_rate": 1.0,
+      "mean_score": 1.0
+    },
+    {
+      "surface": "shell",
+      "category": "regex",
+      "runs": 4,
+      "success_rate": 1.0,
+      "mean_score": 1.0
+    },
+    {
+      "surface": "shell",
+      "category": "text",
+      "runs": 8,
+      "success_rate": 0.75,
+      "mean_score": 0.9166666666666666
+    }
+  ]
+}
