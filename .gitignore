@@ -5,16 +5,21 @@
 
 # Dependencies and caches
 node_modules/
+.npm-cache/
 __pycache__/
 *.py[cod]
 .pytest_cache/
+.gitconfig-benchmark
 
 # Benchmark source repositories are cloned on demand.
 benchmark/repos/
+benchmark/results/extended/*.sqlite
+benchmark/results/*_smoke.jsonl
+benchmark/results/*_smoke.json
+benchmark/results/*_smoke.sqlite
 
 # Editor and OS files
 .idea/
 .vscode/
 .DS_Store
 Thumbs.db
-

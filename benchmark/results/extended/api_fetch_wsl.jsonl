@@ -1,0 +1,189 @@
+{"environment": "wsl", "client": "requests", "scenario": "json", "repeat": 0, "duration_ms": 3.3752999879652634, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests", "scenario": "gzip", "repeat": 0, "duration_ms": 2.3289000091608614, "status": 200, "bytes": 45, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests", "scenario": "redirect", "repeat": 0, "duration_ms": 3.3681000059004873, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests", "scenario": "server_error", "repeat": 0, "duration_ms": 2.5677999947220087, "status": 500, "bytes": 12, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests", "scenario": "pagination", "repeat": 0, "duration_ms": 6.494000001111999, "status": 200, "calls": 3, "items": 9, "amount": 13.5, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests", "scenario": "rate_limit", "repeat": 0, "duration_ms": 2007.072699998389, "status": 200, "calls": 3, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "json", "repeat": 0, "duration_ms": 1.7251000099349767, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "gzip", "repeat": 0, "duration_ms": 1.6629000019747764, "status": 200, "bytes": 45, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "redirect", "repeat": 0, "duration_ms": 3.192399992258288, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "server_error", "repeat": 0, "duration_ms": 1.263199999812059, "status": 500, "bytes": 12, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "pagination", "repeat": 0, "duration_ms": 3.9745999965816736, "status": 200, "calls": 3, "items": 9, "amount": 13.5, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "rate_limit", "repeat": 0, "duration_ms": 1.225300002261065, "status": 200, "calls": 1, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "json", "repeat": 0, "duration_ms": 18.00459998776205, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "gzip", "repeat": 0, "duration_ms": 15.835900005185977, "status": 200, "bytes": 45, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "redirect", "repeat": 0, "duration_ms": 16.51030000357423, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "server_error", "repeat": 0, "duration_ms": 17.413699999451637, "status": 500, "bytes": 12, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "pagination", "repeat": 0, "duration_ms": 44.37740000139456, "status": 200, "calls": 3, "items": 9, "amount": 13.5, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "rate_limit", "repeat": 0, "duration_ms": 27.023399990866892, "status": 200, "calls": 1, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "json", "repeat": 0, "duration_ms": 1.149300005636178, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "gzip", "repeat": 0, "duration_ms": 1.143500005127862, "status": 200, "bytes": 45, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "redirect", "repeat": 0, "duration_ms": 2.3395000025629997, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "server_error", "repeat": 0, "duration_ms": 1.157000006060116, "status": 500, "bytes": 12, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "pagination", "repeat": 0, "duration_ms": 3.622799995355308, "status": 200, "calls": 3, "items": 9, "amount": 13.5, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "rate_limit", "repeat": 0, "duration_ms": 4.543600007309578, "status": 200, "calls": 1, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "json", "repeat": 0, "duration_ms": 1.967000003787689, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "gzip", "repeat": 0, "duration_ms": 1.6348999924957752, "status": 200, "bytes": 45, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "redirect", "repeat": 0, "duration_ms": 14.966600007028319, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "server_error", "repeat": 0, "duration_ms": 1.564000005600974, "status": 500, "bytes": 12, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "pagination", "repeat": 0, "duration_ms": 3.6368000000948086, "status": 200, "calls": 3, "items": 9, "amount": 13.5, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "rate_limit", "repeat": 0, "duration_ms": 1.0967999987769872, "status": 200, "calls": 1, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "json", "repeat": 0, "duration_ms": 23.959300000569783, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "gzip", "repeat": 0, "duration_ms": 22.983300004852936, "status": 200, "bytes": 45, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "redirect", "repeat": 0, "duration_ms": 21.470900013810024, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "server_error", "repeat": 0, "duration_ms": 17.5559999916004, "status": 500, "bytes": 12, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "pagination", "repeat": 0, "duration_ms": 56.895200003054924, "status": 200, "calls": 3, "items": 9, "amount": 13.5, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "rate_limit", "repeat": 0, "duration_ms": 16.940100002102554, "status": 200, "calls": 1, "correct": true, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "json", "repeat": 0, "duration_ms": 14.622000002418645, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "gzip", "repeat": 0, "duration_ms": 10.476099996594712, "status": 200, "bytes": 64, "correct": false, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "redirect", "repeat": 0, "duration_ms": 13.268099995912053, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "server_error", "repeat": 0, "duration_ms": 11.039299992262386, "status": 0, "bytes": 0, "correct": false, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "pagination", "repeat": 0, "duration_ms": 33.51930000644643, "status": 200, "calls": 3, "items": 9, "amount": 13.5, "correct": true, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "rate_limit", "repeat": 0, "duration_ms": 11.266100002103485, "status": 200, "calls": 1, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests", "scenario": "concurrency", "repeat": 0, "workers": 1, "requests": 16, "duration_ms": 32.12179998809006, "succeeded": 16, "throughput_rps": 498.10409148716417, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests", "scenario": "concurrency", "repeat": 0, "workers": 4, "requests": 16, "duration_ms": 18.350400001509115, "succeeded": 16, "throughput_rps": 871.9155984983531, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests", "scenario": "concurrency", "repeat": 0, "workers": 8, "requests": 16, "duration_ms": 62.06670000392478, "succeeded": 16, "throughput_rps": 257.7871869938025, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "concurrency", "repeat": 0, "workers": 1, "requests": 16, "duration_ms": 61.96340000315104, "succeeded": 16, "throughput_rps": 258.2169474106706, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "concurrency", "repeat": 0, "workers": 4, "requests": 16, "duration_ms": 34.677799994824454, "succeeded": 16, "throughput_rps": 461.3902843429499, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "concurrency", "repeat": 0, "workers": 8, "requests": 16, "duration_ms": 46.585999996750616, "succeeded": 16, "throughput_rps": 343.4508221593613, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "concurrency", "repeat": 0, "workers": 1, "requests": 16, "duration_ms": 309.37590000394266, "succeeded": 16, "throughput_rps": 51.71702126699623, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "concurrency", "repeat": 0, "workers": 4, "requests": 16, "duration_ms": 210.89750000101048, "succeeded": 16, "throughput_rps": 75.86623833816587, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "concurrency", "repeat": 0, "workers": 8, "requests": 16, "duration_ms": 188.81799999508075, "succeeded": 16, "throughput_rps": 84.73768390946226, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "concurrency", "repeat": 0, "workers": 1, "requests": 16, "duration_ms": 26.70909999869764, "succeeded": 16, "throughput_rps": 599.0467668614882, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "concurrency", "repeat": 0, "workers": 4, "requests": 16, "duration_ms": 85.94649999577086, "succeeded": 16, "throughput_rps": 186.16232191872044, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "concurrency", "repeat": 0, "workers": 8, "requests": 16, "duration_ms": 17.175399989355356, "succeeded": 16, "throughput_rps": 931.5649131849143, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "concurrency", "repeat": 0, "workers": 1, "requests": 16, "duration_ms": 23.6220999940997, "succeeded": 16, "throughput_rps": 677.3318207947838, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "concurrency", "repeat": 0, "workers": 4, "requests": 16, "duration_ms": 21.573999998508953, "succeeded": 16, "throughput_rps": 741.6334477197465, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "concurrency", "repeat": 0, "workers": 8, "requests": 16, "duration_ms": 50.945800001500174, "succeeded": 16, "throughput_rps": 314.0592551207137, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "concurrency", "repeat": 0, "workers": 1, "requests": 16, "duration_ms": 299.5449000009103, "succeeded": 16, "throughput_rps": 53.414362921723516, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "concurrency", "repeat": 0, "workers": 4, "requests": 16, "duration_ms": 121.44869999610819, "succeeded": 16, "throughput_rps": 131.74286756888068, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "concurrency", "repeat": 0, "workers": 8, "requests": 16, "duration_ms": 87.2384999966016, "succeeded": 16, "throughput_rps": 183.4052625918979, "correct": true, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "concurrency", "repeat": 0, "workers": 1, "requests": 16, "duration_ms": 187.42960000236053, "succeeded": 16, "throughput_rps": 85.36538518888422, "correct": true, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "concurrency", "repeat": 0, "workers": 4, "requests": 16, "duration_ms": 73.58340000791941, "succeeded": 16, "throughput_rps": 217.44034657651048, "correct": true, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "concurrency", "repeat": 0, "workers": 8, "requests": 16, "duration_ms": 63.73000000894535, "succeeded": 16, "throughput_rps": 251.0591557783491, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests", "scenario": "json", "repeat": 1, "duration_ms": 2.2108999983174726, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests", "scenario": "gzip", "repeat": 1, "duration_ms": 2.0857000054093078, "status": 200, "bytes": 45, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests", "scenario": "redirect", "repeat": 1, "duration_ms": 3.5730000090552494, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests", "scenario": "server_error", "repeat": 1, "duration_ms": 1.6928000113693997, "status": 500, "bytes": 12, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests", "scenario": "pagination", "repeat": 1, "duration_ms": 5.352099993615411, "status": 200, "calls": 3, "items": 9, "amount": 13.5, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests", "scenario": "rate_limit", "repeat": 1, "duration_ms": 1.6728000045986846, "status": 200, "calls": 1, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "json", "repeat": 1, "duration_ms": 1.5217000036500394, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "gzip", "repeat": 1, "duration_ms": 1.5725999983260408, "status": 200, "bytes": 45, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "redirect", "repeat": 1, "duration_ms": 2.9316000000108033, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "server_error", "repeat": 1, "duration_ms": 2.935199998319149, "status": 500, "bytes": 12, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "pagination", "repeat": 1, "duration_ms": 15.977699993527494, "status": 200, "calls": 3, "items": 9, "amount": 13.5, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "rate_limit", "repeat": 1, "duration_ms": 1.6471999988425523, "status": 200, "calls": 1, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "json", "repeat": 1, "duration_ms": 18.94890000403393, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "gzip", "repeat": 1, "duration_ms": 21.401200006948784, "status": 200, "bytes": 45, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "redirect", "repeat": 1, "duration_ms": 24.599700001999736, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "server_error", "repeat": 1, "duration_ms": 16.603800002485514, "status": 500, "bytes": 12, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "pagination", "repeat": 1, "duration_ms": 65.15850000141654, "status": 200, "calls": 3, "items": 9, "amount": 13.5, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "rate_limit", "repeat": 1, "duration_ms": 16.14650001283735, "status": 200, "calls": 1, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "json", "repeat": 1, "duration_ms": 1.2894999963464215, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "gzip", "repeat": 1, "duration_ms": 1.4459999947575852, "status": 200, "bytes": 45, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "redirect", "repeat": 1, "duration_ms": 2.7036999963456765, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "server_error", "repeat": 1, "duration_ms": 7.841099999495782, "status": 500, "bytes": 12, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "pagination", "repeat": 1, "duration_ms": 5.794000011519529, "status": 200, "calls": 3, "items": 9, "amount": 13.5, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "rate_limit", "repeat": 1, "duration_ms": 1.0305000032531098, "status": 200, "calls": 1, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "json", "repeat": 1, "duration_ms": 1.4351999998325482, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "gzip", "repeat": 1, "duration_ms": 1.4057000080356374, "status": 200, "bytes": 45, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "redirect", "repeat": 1, "duration_ms": 1.9198999943910167, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "server_error", "repeat": 1, "duration_ms": 1.0307999909855425, "status": 500, "bytes": 12, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "pagination", "repeat": 1, "duration_ms": 3.143800000543706, "status": 200, "calls": 3, "items": 9, "amount": 13.5, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "rate_limit", "repeat": 1, "duration_ms": 1.0381999891251326, "status": 200, "calls": 1, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "json", "repeat": 1, "duration_ms": 18.858399998862296, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "gzip", "repeat": 1, "duration_ms": 18.288199993548915, "status": 200, "bytes": 45, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "redirect", "repeat": 1, "duration_ms": 18.41430000786204, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "server_error", "repeat": 1, "duration_ms": 17.622100000153296, "status": 500, "bytes": 12, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "pagination", "repeat": 1, "duration_ms": 53.561399996397085, "status": 200, "calls": 3, "items": 9, "amount": 13.5, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "rate_limit", "repeat": 1, "duration_ms": 19.09469999372959, "status": 200, "calls": 1, "correct": true, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "json", "repeat": 1, "duration_ms": 11.204100010218099, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "gzip", "repeat": 1, "duration_ms": 10.922199988272041, "status": 200, "bytes": 64, "correct": false, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "redirect", "repeat": 1, "duration_ms": 10.750400004326366, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "server_error", "repeat": 1, "duration_ms": 10.131700008059852, "status": 0, "bytes": 0, "correct": false, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "pagination", "repeat": 1, "duration_ms": 32.46039999066852, "status": 200, "calls": 3, "items": 9, "amount": 13.5, "correct": true, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "rate_limit", "repeat": 1, "duration_ms": 11.566300003323704, "status": 200, "calls": 1, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests", "scenario": "concurrency", "repeat": 1, "workers": 1, "requests": 16, "duration_ms": 25.603600006434135, "succeeded": 16, "throughput_rps": 624.9121215758421, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests", "scenario": "concurrency", "repeat": 1, "workers": 4, "requests": 16, "duration_ms": 19.926199995097704, "succeeded": 16, "throughput_rps": 802.9629334211421, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests", "scenario": "concurrency", "repeat": 1, "workers": 8, "requests": 16, "duration_ms": 43.386400007875636, "succeeded": 16, "throughput_rps": 368.7791565351269, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "concurrency", "repeat": 1, "workers": 1, "requests": 16, "duration_ms": 24.133599988999777, "succeeded": 16, "throughput_rps": 662.9761000137935, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "concurrency", "repeat": 1, "workers": 4, "requests": 16, "duration_ms": 32.37559999979567, "succeeded": 16, "throughput_rps": 494.19933530501305, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "concurrency", "repeat": 1, "workers": 8, "requests": 16, "duration_ms": 20.228800000040792, "succeeded": 16, "throughput_rps": 790.9515146705556, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "concurrency", "repeat": 1, "workers": 1, "requests": 16, "duration_ms": 308.3979999937583, "succeeded": 16, "throughput_rps": 51.881010902547445, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "concurrency", "repeat": 1, "workers": 4, "requests": 16, "duration_ms": 185.931600004551, "succeeded": 16, "throughput_rps": 86.05315072644119, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "concurrency", "repeat": 1, "workers": 8, "requests": 16, "duration_ms": 212.65759998641443, "succeeded": 16, "throughput_rps": 75.23831737507692, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "concurrency", "repeat": 1, "workers": 1, "requests": 16, "duration_ms": 34.34389999893028, "succeeded": 16, "throughput_rps": 465.8760362247257, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "concurrency", "repeat": 1, "workers": 4, "requests": 16, "duration_ms": 31.4935000060359, "succeeded": 16, "throughput_rps": 508.04134176682527, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "concurrency", "repeat": 1, "workers": 8, "requests": 16, "duration_ms": 40.84409998904448, "succeeded": 16, "throughput_rps": 391.73344508243895, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "concurrency", "repeat": 1, "workers": 1, "requests": 16, "duration_ms": 23.791300001903437, "succeeded": 16, "throughput_rps": 672.514742730322, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "concurrency", "repeat": 1, "workers": 4, "requests": 16, "duration_ms": 41.25650000059977, "succeeded": 16, "throughput_rps": 387.8176772088616, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "concurrency", "repeat": 1, "workers": 8, "requests": 16, "duration_ms": 49.41560000588652, "succeeded": 16, "throughput_rps": 323.7843919348149, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "concurrency", "repeat": 1, "workers": 1, "requests": 16, "duration_ms": 325.8184000005713, "succeeded": 16, "throughput_rps": 49.107109972831324, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "concurrency", "repeat": 1, "workers": 4, "requests": 16, "duration_ms": 114.75959999370389, "succeeded": 16, "throughput_rps": 139.42188715260264, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "concurrency", "repeat": 1, "workers": 8, "requests": 16, "duration_ms": 86.84450000873767, "succeeded": 16, "throughput_rps": 184.23734373955972, "correct": true, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "concurrency", "repeat": 1, "workers": 1, "requests": 16, "duration_ms": 213.45999999903142, "succeeded": 16, "throughput_rps": 74.9554951750801, "correct": true, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "concurrency", "repeat": 1, "workers": 4, "requests": 16, "duration_ms": 70.48300000315066, "succeeded": 16, "throughput_rps": 227.00509341663638, "correct": true, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "concurrency", "repeat": 1, "workers": 8, "requests": 16, "duration_ms": 95.01129999989644, "succeeded": 16, "throughput_rps": 168.40102177338318, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests", "scenario": "json", "repeat": 2, "duration_ms": 2.3240000009536743, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests", "scenario": "gzip", "repeat": 2, "duration_ms": 2.201199997216463, "status": 200, "bytes": 45, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests", "scenario": "redirect", "repeat": 2, "duration_ms": 3.9954999956535175, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests", "scenario": "server_error", "repeat": 2, "duration_ms": 1.7800999921746552, "status": 500, "bytes": 12, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests", "scenario": "pagination", "repeat": 2, "duration_ms": 5.638999995426275, "status": 200, "calls": 3, "items": 9, "amount": 13.5, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests", "scenario": "rate_limit", "repeat": 2, "duration_ms": 1.8060000002151355, "status": 200, "calls": 1, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "json", "repeat": 2, "duration_ms": 1.640300004510209, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "gzip", "repeat": 2, "duration_ms": 1.6279000119538978, "status": 200, "bytes": 45, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "redirect", "repeat": 2, "duration_ms": 3.3389000018360093, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "server_error", "repeat": 2, "duration_ms": 1.5551999968010932, "status": 500, "bytes": 12, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "pagination", "repeat": 2, "duration_ms": 16.11399999819696, "status": 200, "calls": 3, "items": 9, "amount": 13.5, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "rate_limit", "repeat": 2, "duration_ms": 2.2570000000996515, "status": 200, "calls": 1, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "json", "repeat": 2, "duration_ms": 40.70240000146441, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "gzip", "repeat": 2, "duration_ms": 24.970400001620874, "status": 200, "bytes": 45, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "redirect", "repeat": 2, "duration_ms": 25.803199998335913, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "server_error", "repeat": 2, "duration_ms": 20.49260000057984, "status": 500, "bytes": 12, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "pagination", "repeat": 2, "duration_ms": 55.089800007408485, "status": 200, "calls": 3, "items": 9, "amount": 13.5, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "rate_limit", "repeat": 2, "duration_ms": 22.91309999418445, "status": 200, "calls": 1, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "json", "repeat": 2, "duration_ms": 1.2470999936340377, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "gzip", "repeat": 2, "duration_ms": 1.2801999982912093, "status": 200, "bytes": 45, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "redirect", "repeat": 2, "duration_ms": 2.2810999944340438, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "server_error", "repeat": 2, "duration_ms": 5.618399998638779, "status": 500, "bytes": 12, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "pagination", "repeat": 2, "duration_ms": 7.64960001106374, "status": 200, "calls": 3, "items": 9, "amount": 13.5, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "rate_limit", "repeat": 2, "duration_ms": 1.3182999973651022, "status": 200, "calls": 1, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "json", "repeat": 2, "duration_ms": 1.6570000007050112, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "gzip", "repeat": 2, "duration_ms": 1.8505000043660402, "status": 200, "bytes": 45, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "redirect", "repeat": 2, "duration_ms": 2.630999995744787, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "server_error", "repeat": 2, "duration_ms": 1.3728999911108986, "status": 500, "bytes": 12, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "pagination", "repeat": 2, "duration_ms": 3.5764000058406964, "status": 200, "calls": 3, "items": 9, "amount": 13.5, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "rate_limit", "repeat": 2, "duration_ms": 1.1119999981019646, "status": 200, "calls": 1, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "json", "repeat": 2, "duration_ms": 25.81230000942014, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "gzip", "repeat": 2, "duration_ms": 20.525300002191216, "status": 200, "bytes": 45, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "redirect", "repeat": 2, "duration_ms": 27.29929999622982, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "server_error", "repeat": 2, "duration_ms": 23.594899990712292, "status": 500, "bytes": 12, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "pagination", "repeat": 2, "duration_ms": 95.50510000553913, "status": 200, "calls": 3, "items": 9, "amount": 13.5, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "rate_limit", "repeat": 2, "duration_ms": 23.7463000084972, "status": 200, "calls": 1, "correct": true, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "json", "repeat": 2, "duration_ms": 12.508100000559352, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "gzip", "repeat": 2, "duration_ms": 11.95220000226982, "status": 200, "bytes": 64, "correct": false, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "redirect", "repeat": 2, "duration_ms": 11.894900002516806, "status": 200, "bytes": 131, "correct": true, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "server_error", "repeat": 2, "duration_ms": 11.598900004173629, "status": 0, "bytes": 0, "correct": false, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "pagination", "repeat": 2, "duration_ms": 32.79810000094585, "status": 200, "calls": 3, "items": 9, "amount": 13.5, "correct": true, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "rate_limit", "repeat": 2, "duration_ms": 26.089300008607097, "status": 200, "calls": 1, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests", "scenario": "concurrency", "repeat": 2, "workers": 1, "requests": 16, "duration_ms": 25.83180001238361, "succeeded": 16, "throughput_rps": 619.3916023014151, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests", "scenario": "concurrency", "repeat": 2, "workers": 4, "requests": 16, "duration_ms": 67.46970000676811, "succeeded": 16, "throughput_rps": 237.1434880901351, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests", "scenario": "concurrency", "repeat": 2, "workers": 8, "requests": 16, "duration_ms": 19.882199994754046, "succeeded": 16, "throughput_rps": 804.7399183300454, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "concurrency", "repeat": 2, "workers": 1, "requests": 16, "duration_ms": 28.374899993650615, "succeeded": 16, "throughput_rps": 563.8786393460517, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "concurrency", "repeat": 2, "workers": 4, "requests": 16, "duration_ms": 32.91549999266863, "succeeded": 16, "throughput_rps": 486.09317809432423, "correct": true, "error": null}
+{"environment": "wsl", "client": "requests_session", "scenario": "concurrency", "repeat": 2, "workers": 8, "requests": 16, "duration_ms": 34.648200002266094, "succeeded": 16, "throughput_rps": 461.78445053288635, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "concurrency", "repeat": 2, "workers": 1, "requests": 16, "duration_ms": 299.74989999027457, "succeeded": 16, "throughput_rps": 53.37783265488703, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "concurrency", "repeat": 2, "workers": 4, "requests": 16, "duration_ms": 214.43599999474827, "succeeded": 16, "throughput_rps": 74.61433714670976, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx", "scenario": "concurrency", "repeat": 2, "workers": 8, "requests": 16, "duration_ms": 217.16689999448135, "succeeded": 16, "throughput_rps": 73.67605284417925, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "concurrency", "repeat": 2, "workers": 1, "requests": 16, "duration_ms": 31.42939999816008, "succeeded": 16, "throughput_rps": 509.0774879869378, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "concurrency", "repeat": 2, "workers": 4, "requests": 16, "duration_ms": 56.897899994510226, "succeeded": 16, "throughput_rps": 281.20545752204833, "correct": true, "error": null}
+{"environment": "wsl", "client": "httpx_session", "scenario": "concurrency", "repeat": 2, "workers": 8, "requests": 16, "duration_ms": 35.686599992914125, "succeeded": 16, "throughput_rps": 448.3475591167815, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "concurrency", "repeat": 2, "workers": 1, "requests": 16, "duration_ms": 23.196000009193085, "succeeded": 16, "throughput_rps": 689.7740987092105, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "concurrency", "repeat": 2, "workers": 4, "requests": 16, "duration_ms": 52.54620000778232, "succeeded": 16, "throughput_rps": 304.4939500407324, "correct": true, "error": null}
+{"environment": "wsl", "client": "aiohttp", "scenario": "concurrency", "repeat": 2, "workers": 8, "requests": 16, "duration_ms": 31.01789999345783, "succeeded": 16, "throughput_rps": 515.8311814589207, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "concurrency", "repeat": 2, "workers": 1, "requests": 16, "duration_ms": 344.93199999269564, "succeeded": 16, "throughput_rps": 46.385954334010236, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "concurrency", "repeat": 2, "workers": 4, "requests": 16, "duration_ms": 116.76170000282582, "succeeded": 16, "throughput_rps": 137.03123541035094, "correct": true, "error": null}
+{"environment": "wsl", "client": "curl", "scenario": "concurrency", "repeat": 2, "workers": 8, "requests": 16, "duration_ms": 97.24089999508578, "succeeded": 16, "throughput_rps": 164.53981813011382, "correct": true, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "concurrency", "repeat": 2, "workers": 1, "requests": 16, "duration_ms": 231.92700000072364, "succeeded": 16, "throughput_rps": 68.98722442816093, "correct": true, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "concurrency", "repeat": 2, "workers": 4, "requests": 16, "duration_ms": 75.49740000104066, "succeeded": 16, "throughput_rps": 211.9278279752608, "correct": true, "error": null}
+{"environment": "wsl", "client": "wget", "scenario": "concurrency", "repeat": 2, "workers": 8, "requests": 16, "duration_ms": 78.40179999766406, "succeeded": 16, "throughput_rps": 204.076947219027, "correct": true, "error": null}
