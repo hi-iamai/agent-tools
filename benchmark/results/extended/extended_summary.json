@@ -10923,5 +10923,61 @@
       "p95_ms": 3332.8055400023004,
       "error_rate": 0
     }
+  ],
+  "resources": [
+    {
+      "backend": "ast_grep",
+      "runs": 2,
+      "median_wall_ms": 1947.6110499963397,
+      "median_cpu_ms": 4195.3125,
+      "median_peak_rss_mb": 35.109375,
+      "median_output_bytes": 5780.0,
+      "error_rate": 0
+    },
+    {
+      "backend": "git_grep_literal",
+      "runs": 2,
+      "median_wall_ms": 200.5309500018484,
+      "median_cpu_ms": 414.0625,
+      "median_peak_rss_mb": 20.109375,
+      "median_output_bytes": 4616.0,
+      "error_rate": 0
+    },
+    {
+      "backend": "python_scan",
+      "runs": 2,
+      "median_wall_ms": 1062.980199996673,
+      "median_cpu_ms": 1046.875,
+      "median_peak_rss_mb": 25.056640625,
+      "median_output_bytes": 4756.0,
+      "error_rate": 0
+    },
+    {
+      "backend": "rg_literal",
+      "runs": 2,
+      "median_wall_ms": 232.4244500050554,
+      "median_cpu_ms": 757.8125,
+      "median_peak_rss_mb": 13.154296875,
+      "median_output_bytes": 4722.0,
+      "error_rate": 0
+    }
+  ],
+  "security": [
+    {
+      "cases": 5,
+      "success_rate": 1,
+      "secret_leaks": 0
+    }
+  ],
+  "lsp": [
+    {
+      "method": "pylsp_definition",
+      "runs": 15,
+      "initialize_ms": 325.59790000959765,
+      "success_rate": 1,
+      "median_query_ms": 6.36270000541117,
+      "p95_query_ms": 200.6407800057782,
+      "error_rate": 0
+    }
   ]
 }

@@ -1,0 +1,30 @@
+{
+  "completed": {
+    "file_discovery": ["rg_files", "git_ls_files", "fd", "gnu_find", "python_scandir", "python_rglob"],
+    "text_search": ["ripgrep", "git_grep", "ugrep", "gnu_grep", "ag", "python_re", "sqlite_fts5"],
+    "structure": ["regex", "ast_grep", "python_ast"],
+    "code_intelligence": ["jedi", "tree_sitter", "ctags_wsl", "python_lsp_definition"],
+    "local_websearch": ["token_overlap", "bm25", "fts5", "embedding", "hybrid_rrf"],
+    "webfetch": ["requests", "httpx", "aiohttp", "curl", "wget", "bs4", "lxml", "readability", "trafilatura", "selectolax"],
+    "browser": ["playwright_edge"],
+    "api_fetch": ["pagination", "gzip", "redirect", "429", "500", "sync", "persistent", "native_async"],
+    "git_tools": ["status", "diff", "log", "show", "blame", "changed_files", "history_search"],
+    "io_patch": ["read", "range_read", "batch_read", "exact_replace", "git_apply", "conflict_check"],
+    "runtime": ["per_call_process", "persistent_stdio", "local_http", "mcp_stdio"],
+    "security_smoke": ["workspace_boundary", "network_deny", "delete_deny", "secret_non_disclosure"],
+    "agent_surface": ["shell", "dedicated", "minimal_router"]
+  },
+  "not_run": {
+    "public_websearch_providers": "No Tavily, Exa, Brave, Bing, or SERP credentials",
+    "native_model_websearch": "Current Bedrock-backed gateway returned HTTP 400 unsupported parameter",
+    "searxng": "No external search engines configured",
+    "lsp_references_workspace_symbols": "Only definition request is covered",
+    "scip": "No indexer installed",
+    "zoekt": "No Go/container deployment in benchmark environment",
+    "codeql": "Heavy installation not performed",
+    "swe_bench": "Docker unavailable",
+    "native_linux": "Only WSL1 is available",
+    "mcp_streamable_http": "Only MCP STDIO completed",
+    "full_prompt_injection_red_team": "Only path/command boundary smoke tests completed"
+  }
+}

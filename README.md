@@ -15,6 +15,7 @@ Agent 底层 Tool、Backend、结果处理与运行形态的可复现评测工�
 文档入口：
 
 - [`docs/research/README.md`](docs/research/README.md)
+- [`docs/research/agent_tool全景评测报告.md`](docs/research/agent_tool全景评测报告.md)
 - [`docs/research/全面评测计划.md`](docs/research/全面评测计划.md)
 - [`docs/research/扩展评测阶段结果.md`](docs/research/扩展评测阶段结果.md)
 

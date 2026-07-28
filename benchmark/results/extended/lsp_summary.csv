@@ -1,0 +1,2 @@
+﻿method,runs,initialize_ms,success_rate,median_query_ms,p95_query_ms,error_rate
+pylsp_definition,15,325.59790000959765,1,6.36270000541117,200.6407800057782,0

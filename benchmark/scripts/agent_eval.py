@@ -113,7 +113,12 @@ def execute_tool(repo: Path, name: str, data: dict[str, Any], max_chars: int) ->
     strategy = None
     if name == "shell":
         command = data["command"]
-        blocked = re.search(r"(?i)(remove-item|del\\s|erase\\s|set-content|add-content|out-file|invoke-webrequest|curl\\s|wget\\s|git\\s+(checkout|reset|clean))", command)
+        blocked = re.search(
+            r"(?i)(remove-item|\bdel\s|\berase\s|set-content|add-content|out-file|"
+            r"invoke-webrequest|\bcurl(?:\.exe)?\s|\bwget(?:\.exe)?\s|"
+            r"\bgit\s+(checkout|reset|clean)\b)",
+            command,
+        )
         if blocked:
             return {"error": "blocked unsafe or mutating command", "duration_ms": 0}
         proc = subprocess.run(

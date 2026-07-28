@@ -1,0 +1,15 @@
+{"method": "pylsp_definition", "symbol": "QuerySet", "repeat": 0, "duration_ms": 501.7531999910716, "result_count": 1, "success": true, "initialize_ms": 325.59790000959765, "error": null}
+{"method": "pylsp_definition", "symbol": "HttpResponse", "repeat": 0, "duration_ms": 59.97620000562165, "result_count": 1, "success": true, "initialize_ms": 325.59790000959765, "error": null}
+{"method": "pylsp_definition", "symbol": "URLResolver", "repeat": 0, "duration_ms": 71.59260001208168, "result_count": 1, "success": true, "initialize_ms": 325.59790000959765, "error": null}
+{"method": "pylsp_definition", "symbol": "BaseCache", "repeat": 0, "duration_ms": 49.32150000240654, "result_count": 1, "success": true, "initialize_ms": 325.59790000959765, "error": null}
+{"method": "pylsp_definition", "symbol": "get_user_model", "repeat": 0, "duration_ms": 32.901999991736375, "result_count": 1, "success": true, "initialize_ms": 325.59790000959765, "error": null}
+{"method": "pylsp_definition", "symbol": "QuerySet", "repeat": 1, "duration_ms": 6.878100000903942, "result_count": 1, "success": true, "initialize_ms": 325.59790000959765, "error": null}
+{"method": "pylsp_definition", "symbol": "HttpResponse", "repeat": 1, "duration_ms": 4.7636000090278685, "result_count": 1, "success": true, "initialize_ms": 325.59790000959765, "error": null}
+{"method": "pylsp_definition", "symbol": "URLResolver", "repeat": 1, "duration_ms": 4.728700005216524, "result_count": 1, "success": true, "initialize_ms": 325.59790000959765, "error": null}
+{"method": "pylsp_definition", "symbol": "BaseCache", "repeat": 1, "duration_ms": 7.212199998321012, "result_count": 1, "success": true, "initialize_ms": 325.59790000959765, "error": null}
+{"method": "pylsp_definition", "symbol": "get_user_model", "repeat": 1, "duration_ms": 4.386400003568269, "result_count": 1, "success": true, "initialize_ms": 325.59790000959765, "error": null}
+{"method": "pylsp_definition", "symbol": "QuerySet", "repeat": 2, "duration_ms": 5.28409999969881, "result_count": 1, "success": true, "initialize_ms": 325.59790000959765, "error": null}
+{"method": "pylsp_definition", "symbol": "HttpResponse", "repeat": 2, "duration_ms": 3.7765000015497208, "result_count": 1, "success": true, "initialize_ms": 325.59790000959765, "error": null}
+{"method": "pylsp_definition", "symbol": "URLResolver", "repeat": 2, "duration_ms": 4.631200004951097, "result_count": 1, "success": true, "initialize_ms": 325.59790000959765, "error": null}
+{"method": "pylsp_definition", "symbol": "BaseCache", "repeat": 2, "duration_ms": 6.36270000541117, "result_count": 1, "success": true, "initialize_ms": 325.59790000959765, "error": null}
+{"method": "pylsp_definition", "symbol": "get_user_model", "repeat": 2, "duration_ms": 4.429900000104681, "result_count": 1, "success": true, "initialize_ms": 325.59790000959765, "error": null}

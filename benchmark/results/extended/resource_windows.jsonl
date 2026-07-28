@@ -1,0 +1,8 @@
+{"backend": "rg_literal", "repeat": 0, "duration_ms": 275.84140001272317, "cpu_ms": 843.75, "peak_rss_bytes": 15437824, "output_bytes": 4722, "returncode": 0, "error": null}
+{"backend": "git_grep_literal", "repeat": 0, "duration_ms": 213.84959999704733, "cpu_ms": 250.0, "peak_rss_bytes": 20774912, "output_bytes": 4616, "returncode": 0, "error": null}
+{"backend": "python_scan", "repeat": 0, "duration_ms": 1021.5260999975726, "cpu_ms": 1031.25, "peak_rss_bytes": 26509312, "output_bytes": 4756, "returncode": 0, "error": null}
+{"backend": "ast_grep", "repeat": 0, "duration_ms": 3120.8878999896115, "cpu_ms": 4281.25, "peak_rss_bytes": 38490112, "output_bytes": 5780, "returncode": 0, "error": null}
+{"backend": "rg_literal", "repeat": 1, "duration_ms": 189.00749999738764, "cpu_ms": 671.875, "peak_rss_bytes": 12148736, "output_bytes": 4722, "returncode": 0, "error": null}
+{"backend": "git_grep_literal", "repeat": 1, "duration_ms": 187.21230000664946, "cpu_ms": 578.125, "peak_rss_bytes": 21397504, "output_bytes": 4616, "returncode": 0, "error": null}
+{"backend": "python_scan", "repeat": 1, "duration_ms": 1104.4342999957735, "cpu_ms": 1062.5, "peak_rss_bytes": 26038272, "output_bytes": 4756, "returncode": 0, "error": null}
+{"backend": "ast_grep", "repeat": 1, "duration_ms": 774.334200003068, "cpu_ms": 4109.375, "peak_rss_bytes": 35139584, "output_bytes": 5780, "returncode": 0, "error": null}

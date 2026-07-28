@@ -192,6 +192,9 @@ def main() -> None:
     multirepo_rows = []
     patch_rows = []
     mcp_rows = []
+    resource_rows = []
+    security_rows = []
+    lsp_rows = []
     for path in base.glob("extended_search_*.jsonl"):
         search_rows.extend(read_jsonl(path))
     for path in base.glob("webfetch_*.jsonl"):
@@ -218,6 +221,12 @@ def main() -> None:
         patch_rows.extend(read_jsonl(path))
     for path in base.glob("mcp_runtime_*.jsonl"):
         mcp_rows.extend(read_jsonl(path))
+    for path in base.glob("resource_*.jsonl"):
+        resource_rows.extend(read_jsonl(path))
+    for path in base.glob("security_boundaries*.jsonl"):
+        security_rows.extend(read_jsonl(path))
+    for path in base.glob("lsp_*.jsonl"):
+        lsp_rows.extend(read_jsonl(path))
     summary = {
         "search": summarize_search(search_rows),
         "webfetch": summarize_web(web_rows),
@@ -284,6 +293,35 @@ def main() -> None:
                 "error_rate": statistics.mean(bool(x["is_error"]) for x in mcp_rows) if mcp_rows else 0,
             }
         ] if mcp_rows else [],
+        "resources": [
+            {
+                "backend": backend,
+                "runs": len(values),
+                "median_wall_ms": statistics.median(x["duration_ms"] for x in values),
+                "median_cpu_ms": statistics.median(x["cpu_ms"] for x in values),
+                "median_peak_rss_mb": statistics.median(x["peak_rss_bytes"] for x in values) / 1024 / 1024,
+                "median_output_bytes": statistics.median(x["output_bytes"] for x in values),
+                "error_rate": statistics.mean(bool(x["error"]) for x in values),
+            }
+            for backend, values in sorted({
+                backend: [x for x in resource_rows if x["backend"] == backend]
+                for backend in {x["backend"] for x in resource_rows}
+            }.items())
+        ],
+        "security": [{
+            "cases": len(security_rows),
+            "success_rate": statistics.mean(bool(x["success"]) for x in security_rows) if security_rows else 0,
+            "secret_leaks": sum(bool(x["secret_leaked"]) for x in security_rows),
+        }] if security_rows else [],
+        "lsp": [{
+            "method": "pylsp_definition",
+            "runs": len(lsp_rows),
+            "initialize_ms": statistics.median(x["initialize_ms"] for x in lsp_rows),
+            "success_rate": statistics.mean(bool(x["success"]) for x in lsp_rows),
+            "median_query_ms": statistics.median(x["duration_ms"] for x in lsp_rows),
+            "p95_query_ms": percentile([x["duration_ms"] for x in lsp_rows], 0.95),
+            "error_rate": statistics.mean(bool(x["error"]) for x in lsp_rows),
+        }] if lsp_rows else [],
     }
     json_dump(base / "extended_summary.json", summary)
     write_csv(base / "search_summary.csv", summary["search"])
@@ -299,6 +337,9 @@ def main() -> None:
     write_csv(base / "multirepo_search_summary.csv", summary["multirepo_search"])
     write_csv(base / "patch_tools_summary.csv", summary["patch_tools"])
     write_csv(base / "mcp_runtime_summary.csv", summary["mcp_runtime"])
+    write_csv(base / "resource_summary.csv", summary["resources"])
+    write_csv(base / "security_summary.csv", summary["security"])
+    write_csv(base / "lsp_summary.csv", summary["lsp"])
     print(json.dumps({key: len(value) for key, value in summary.items()}, indent=2))
 
 

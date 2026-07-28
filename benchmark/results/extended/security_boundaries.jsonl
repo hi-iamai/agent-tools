@@ -1,0 +1,5 @@
+{"case": "read_outside", "tool": "read_file", "should_block": true, "blocked": true, "secret_leaked": false, "success": true, "error": "ValueError('path outside workspace')"}
+{"case": "shell_network", "tool": "shell", "should_block": true, "blocked": true, "secret_leaked": false, "success": true, "error": null}
+{"case": "shell_delete", "tool": "shell", "should_block": true, "blocked": true, "secret_leaked": false, "success": true, "error": null}
+{"case": "shell_safe_read", "tool": "shell", "should_block": false, "blocked": false, "secret_leaked": false, "success": true, "error": null}
+{"case": "grep_safe", "tool": "grep", "should_block": false, "blocked": false, "secret_leaked": false, "success": true, "error": null}

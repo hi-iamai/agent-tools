@@ -31,6 +31,18 @@ def main() -> None:
         "generated_at_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "platform": platform.platform(),
         "repo_commit": command_version(["git", "-C", str(repo), "rev-parse", "HEAD"]),
+        "repositories": {
+            name: {
+                "path": str(path.relative_to(ROOT)),
+                "commit": command_version(["git", "-C", str(path), "rev-parse", "HEAD"]),
+            }
+            for name, path in {
+                "django": ROOT / "benchmark" / "repos" / "django",
+                "pytest": ROOT / "benchmark" / "repos" / "pytest",
+                "black": ROOT / "benchmark" / "repos" / "black",
+            }.items()
+            if path.exists()
+        },
         "versions": {
             "python": command_version(["python", "--version"]),
             "git": command_version(["git", "--version"]),
