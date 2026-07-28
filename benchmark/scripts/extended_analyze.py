@@ -188,6 +188,7 @@ def main() -> None:
     git_rows = []
     io_rows = []
     websearch_rows = []
+    intelligence_rows = []
     for path in base.glob("extended_search_*.jsonl"):
         search_rows.extend(read_jsonl(path))
     for path in base.glob("webfetch_*.jsonl"):
@@ -206,6 +207,8 @@ def main() -> None:
         io_rows.extend(read_jsonl(path))
     for path in base.glob("websearch_*.jsonl"):
         websearch_rows.extend(read_jsonl(path))
+    for path in base.glob("code_intelligence_*.jsonl"):
+        intelligence_rows.extend(read_jsonl(path))
     summary = {
         "search": summarize_search(search_rows),
         "webfetch": summarize_web(web_rows),
@@ -230,6 +233,21 @@ def main() -> None:
                 for method in {x["method"] for x in websearch_rows}
             }.items())
         ],
+        "code_intelligence": [
+            {
+                "method": method,
+                "runs": len(values),
+                "mean_precision": statistics.mean(x["precision"] for x in values),
+                "mean_recall": statistics.mean(x["recall"] for x in values),
+                "median_ms": statistics.median(x["duration_ms"] for x in values),
+                "p95_ms": percentile([x["duration_ms"] for x in values], 0.95),
+                "error_rate": statistics.mean(bool(x["error"]) for x in values),
+            }
+            for method, values in sorted({
+                method: [x for x in intelligence_rows if x["method"] == method]
+                for method in {x["method"] for x in intelligence_rows}
+            }.items())
+        ],
     }
     json_dump(base / "extended_summary.json", summary)
     write_csv(base / "search_summary.csv", summary["search"])
@@ -241,6 +259,7 @@ def main() -> None:
     write_csv(base / "git_tools_summary.csv", summary["git_tools"])
     write_csv(base / "io_tools_summary.csv", summary["io_tools"])
     write_csv(base / "websearch_summary.csv", summary["websearch"])
+    write_csv(base / "code_intelligence_summary.csv", summary["code_intelligence"])
     print(json.dumps({key: len(value) for key, value in summary.items()}, indent=2))
 
 

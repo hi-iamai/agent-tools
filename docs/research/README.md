@@ -11,6 +11,7 @@
 - Phase 1：文件/文本/索引/结构搜索扩展；
 - Phase 1：WebFetch、浏览器和 API Fetch 固定 fixture；
 - Phase 1：本地 BM25、FTS5、Embedding 和无答案 WebSearch fixture；
+- Phase 1：Jedi、Tree-sitter、Ctags 与 regex definition 定位；
 - Windows 与 Ubuntu 24.04 WSL1 对照。
 
 仍在进行：

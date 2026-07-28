@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-28T17:47:12Z",
+  "generated_at_utc": "2026-07-28T18:01:13Z",
   "platform": "Windows-2025Server-10.0.26100-SP0",
   "repo_commit": "5e32c82a5a896e1d942cfc9dd9a2ebbe86741258",
   "versions": {
@@ -20,8 +20,9 @@
     "analyze.py": "a8dcea8c5076a00c7a1f629019eb68f2f082f3dcb1a8f6fa1126dddc2df977fb",
     "api_fetch_bench.py": "2af8187c536ba0aded30e4c2957c3a4e8a98dbe539d24ede0749e327bf6f22ec",
     "browser_fetch_bench.mjs": "31e20398d2c03db2fe58d0ddc726aa318a5cd6ebd91a1a6967c6f2e2c31b0651",
+    "code_intelligence_bench.py": "f4175440d7ba6f575d23936441f1031168a083a4ec20bcffeb669a9c07cafa2b",
     "common.py": "11452fe273d3a6862a9ba5f39bcde603cae891d86ce4446d9f6ee66a37b71e5a",
-    "extended_analyze.py": "b1f01dd8cd7280331d0ed2396c0ad04e02516204853214fd837d92a4743d0173",
+    "extended_analyze.py": "8a2288a6f44a77667d3c5687d089d1c7569dc18acaf7d80d9ace18159b73e7f9",
     "extended_search_bench.py": "dee4d2ffbb33760c7d8631606a30924508b49a347a097ce98f740e6180f74881",
     "generate_manifest.py": "c46473cb9666e85c3c13f161d9f1366113359dbc16afead264267a33a0f38f2c",
     "git_tool_bench.py": "66a4c0674364b02a481a5072ad7732cc908434bd5cda7881d45f007741ab9261",

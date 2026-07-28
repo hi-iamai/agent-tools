@@ -10767,5 +10767,43 @@
       "median_ms": 0.06370000483002514,
       "p95_ms": 0.07464000373147428
     }
+  ],
+  "code_intelligence": [
+    {
+      "method": "ctags",
+      "runs": 20,
+      "mean_precision": 0.5,
+      "mean_recall": 0.5,
+      "median_ms": 933.244449995982,
+      "p95_ms": 2091.900865001662,
+      "error_rate": 0.5
+    },
+    {
+      "method": "jedi",
+      "runs": 20,
+      "mean_precision": 1.0,
+      "mean_recall": 1.0,
+      "median_ms": 13.964750003651716,
+      "p95_ms": 307.0770649945189,
+      "error_rate": 0
+    },
+    {
+      "method": "rg_definition",
+      "runs": 20,
+      "mean_precision": 1.0,
+      "mean_recall": 1.0,
+      "median_ms": 168.68329999851994,
+      "p95_ms": 302.87333500309614,
+      "error_rate": 0
+    },
+    {
+      "method": "tree_sitter",
+      "runs": 20,
+      "mean_precision": 1.0,
+      "mean_recall": 1.0,
+      "median_ms": 3168.1736999962595,
+      "p95_ms": 3398.31513999452,
+      "error_rate": 0
+    }
   ]
 }
