@@ -241,11 +241,28 @@ def grade(task: dict[str, Any], final: dict[str, Any] | None, trace: list[dict[s
             for word in ("不存在", "没有命中", "未找到", "no match", "not found")
         ))
     if task.get("expected_regex"):
-        # For list tasks, require that the agent at least used a matching search
-        # and returned multiple evidence/result lines rather than guessing.
         tool_blob = json.dumps(trace, ensure_ascii=False)
+        expected_matches = task.get("expected_matches", [])
+        expected_keys = {
+            match.get("symbol") or match.get("text") or f"{match['path']}:{match['line']}"
+            for match in expected_matches
+        }
+        actual_keys = {
+            key for key in expected_keys
+            if key.lower() in summary_blob.lower()
+        }
+        match_recall = len(actual_keys) / len(expected_keys) if expected_keys else 1.0
         checks.append(task["expected_path"] in summary_blob)
+        checks.append(match_recall >= 0.9)
         checks.append("rg" in tool_blob.lower() or "grep" in tool_blob.lower() or "workspace_query" in tool_blob)
+        return {
+            "success": all(checks),
+            "score": sum(checks) / len(checks),
+            "checks": checks,
+            "match_recall": match_recall,
+            "expected_match_count": len(expected_keys),
+            "returned_match_count": len(actual_keys),
+        }
     score = sum(checks) / len(checks) if checks else 0.0
     return {"success": score >= 0.8, "score": score, "checks": checks}
 

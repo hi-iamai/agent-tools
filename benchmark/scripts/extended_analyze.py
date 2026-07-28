@@ -46,6 +46,7 @@ def summarize_search(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
             "mean_precision": statistics.mean(x.get("precision", 0) for x in values),
             "mean_recall": statistics.mean(x.get("recall", 0) for x in values),
             "median_output_bytes": statistics.median(x["output_bytes"] for x in values),
+            "median_raw_output_bytes": statistics.median(x.get("raw_output_bytes", x["output_bytes"]) for x in values),
             "error_rate": sum(x["returncode"] not in (0, 1) for x in values) / len(values),
         })
     return result
@@ -64,9 +65,34 @@ def summarize_web(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
             "extractor": extractor,
             "runs": len(values),
             "mean_recall": statistics.mean(x["recall"] for x in values),
+            "mean_content_precision": statistics.mean(x.get("content_precision", 0) for x in values),
+            "mean_content_recall": statistics.mean(x.get("content_recall", 0) for x in values),
+            "mean_content_f1": statistics.mean(x.get("content_f1", 0) for x in values),
             "median_ms": statistics.median(times),
             "p95_ms": percentile(times, 0.95),
             "median_output_chars": statistics.median(x["output_chars"] for x in values),
+            "error_rate": sum(bool(x["error"]) for x in values) / len(values),
+        })
+    return result
+
+
+def summarize_web_by_page(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    groups: dict[tuple, list] = defaultdict(list)
+    for row in rows:
+        groups[(row["environment"], row["page"], row["client"], row["extractor"])].append(row)
+    result = []
+    for (environment, page, client, extractor), values in sorted(groups.items()):
+        result.append({
+            "environment": environment,
+            "page": page,
+            "client": client,
+            "extractor": extractor,
+            "runs": len(values),
+            "evidence_recall": statistics.mean(x["recall"] for x in values),
+            "content_precision": statistics.mean(x.get("content_precision", 0) for x in values),
+            "content_recall": statistics.mean(x.get("content_recall", 0) for x in values),
+            "content_f1": statistics.mean(x.get("content_f1", 0) for x in values),
+            "median_ms": statistics.median(x["total_ms"] for x in values),
             "error_rate": sum(bool(x["error"]) for x in values) / len(values),
         })
     return result
@@ -115,6 +141,31 @@ def summarize_structure(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return result
 
 
+def summarize_generic(rows: list[dict[str, Any]], keys: list[str]) -> list[dict[str, Any]]:
+    groups: dict[tuple, list] = defaultdict(list)
+    for row in rows:
+        groups[tuple(row.get(key, "") for key in keys)].append(row)
+    result = []
+    for group_key, values in sorted(groups.items()):
+        item = {key: value for key, value in zip(keys, group_key)}
+        item.update({
+            "runs": len(values),
+            "median_ms": statistics.median(x["duration_ms"] for x in values),
+            "p95_ms": percentile([x["duration_ms"] for x in values], 0.95),
+            "median_output_bytes": statistics.median(x.get("output_bytes", 0) for x in values),
+            "success_rate": statistics.mean(
+                bool(
+                    x["success"] if "success" in x
+                    else x["correct"] if "correct" in x
+                    else x.get("returncode", 1) == 0
+                )
+                for x in values
+            ),
+        })
+        result.append(item)
+    return result
+
+
 def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
     if not rows:
         return
@@ -133,6 +184,9 @@ def main() -> None:
     web_rows = []
     api_rows = []
     structure_rows = []
+    runtime_rows = []
+    git_rows = []
+    io_rows = []
     for path in base.glob("extended_search_*.jsonl"):
         search_rows.extend(read_jsonl(path))
     for path in base.glob("webfetch_*.jsonl"):
@@ -143,17 +197,31 @@ def main() -> None:
         api_rows.extend(read_jsonl(path))
     for path in base.glob("structure_*.jsonl"):
         structure_rows.extend(read_jsonl(path))
+    for path in base.glob("runtime_*.jsonl"):
+        runtime_rows.extend(read_jsonl(path))
+    for path in base.glob("git_tools_*.jsonl"):
+        git_rows.extend(read_jsonl(path))
+    for path in base.glob("io_tools_*.jsonl"):
+        io_rows.extend(read_jsonl(path))
     summary = {
         "search": summarize_search(search_rows),
         "webfetch": summarize_web(web_rows),
+        "webfetch_by_page": summarize_web_by_page(web_rows),
         "api_fetch": summarize_api(api_rows),
         "structure": summarize_structure(structure_rows),
+        "runtime": summarize_generic(runtime_rows, ["environment", "runtime"]),
+        "git_tools": summarize_generic(git_rows, ["environment", "tool"]),
+        "io_tools": summarize_generic(io_rows, ["environment", "tool"]),
     }
     json_dump(base / "extended_summary.json", summary)
     write_csv(base / "search_summary.csv", summary["search"])
     write_csv(base / "webfetch_summary.csv", summary["webfetch"])
+    write_csv(base / "webfetch_page_summary.csv", summary["webfetch_by_page"])
     write_csv(base / "api_fetch_summary.csv", summary["api_fetch"])
     write_csv(base / "structure_summary.csv", summary["structure"])
+    write_csv(base / "runtime_summary.csv", summary["runtime"])
+    write_csv(base / "git_tools_summary.csv", summary["git_tools"])
+    write_csv(base / "io_tools_summary.csv", summary["io_tools"])
     print(json.dumps({key: len(value) for key, value in summary.items()}, indent=2))
 
 

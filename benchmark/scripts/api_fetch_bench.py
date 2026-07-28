@@ -107,10 +107,10 @@ def pagination(client: str, base: str, persistent: PersistentClients) -> tuple[i
     return calls, items, amount
 
 
-def rate_limit(client: str, base: str, persistent: PersistentClients) -> tuple[int, bool]:
+def rate_limit(client: str, base: str, persistent: PersistentClients, run_id: str) -> tuple[int, bool]:
     calls = 0
     while calls < 5:
-        status, raw = fetch(client, f"{base}/api/rate-limit", persistent=persistent)
+        status, raw = fetch(client, f"{base}/api/rate-limit?run_id={run_id}", persistent=persistent)
         calls += 1
         if status == 200:
             return calls, bool(json.loads(raw).get("ok"))
@@ -129,6 +129,29 @@ def concurrency(client: str, base: str, workers: int, requests_count: int, persi
             range(requests_count),
         ))
     return (time.perf_counter() - started) * 1000, sum(status == 200 for status, _ in results)
+
+
+async def async_concurrency(client: str, base: str, concurrency_limit: int, requests_count: int) -> tuple[float, int]:
+    semaphore = asyncio.Semaphore(concurrency_limit)
+    started = time.perf_counter()
+    if client == "aiohttp_async":
+        async with aiohttp.ClientSession() as session:
+            async def one() -> int:
+                async with semaphore:
+                    async with session.get(f"{base}/api/page?page=1", timeout=5) as response:
+                        await response.read()
+                        return response.status
+            statuses = await asyncio.gather(*(one() for _ in range(requests_count)))
+    elif client == "httpx_async":
+        async with httpx.AsyncClient(follow_redirects=True, timeout=5) as session:
+            async def one() -> int:
+                async with semaphore:
+                    response = await session.get(f"{base}/api/page?page=1")
+                    return response.status_code
+            statuses = await asyncio.gather(*(one() for _ in range(requests_count)))
+    else:
+        raise KeyError(client)
+    return (time.perf_counter() - started) * 1000, sum(status == 200 for status in statuses)
 
 
 def main() -> None:
@@ -178,7 +201,7 @@ def main() -> None:
             })
             started = time.perf_counter()
             try:
-                calls, ok = rate_limit(client, args.base_url, persistent)
+                calls, ok = rate_limit(client, args.base_url, persistent, f"{args.environment}-{client}-{repeat}")
                 error = None
             except Exception as exc:
                 calls, ok, error = 0, False, repr(exc)
@@ -191,6 +214,22 @@ def main() -> None:
             for workers in (1, 4, 8):
                 try:
                     duration_ms, succeeded = concurrency(client, args.base_url, workers, 16, persistent)
+                    error = None
+                except Exception as exc:
+                    duration_ms, succeeded, error = 0, 0, repr(exc)
+                rows.append({
+                    "environment": args.environment, "client": client, "scenario": "concurrency",
+                    "repeat": repeat, "workers": workers, "requests": 16,
+                    "duration_ms": duration_ms, "succeeded": succeeded,
+                    "throughput_rps": succeeded / (duration_ms / 1000) if duration_ms else 0,
+                    "correct": succeeded == 16, "error": error,
+                })
+        for client in ("aiohttp_async", "httpx_async"):
+            for workers in (1, 4, 8):
+                try:
+                    duration_ms, succeeded = asyncio.run(
+                        async_concurrency(client, args.base_url, workers, 16)
+                    )
                     error = None
                 except Exception as exc:
                     duration_ms, succeeded, error = 0, 0, repr(exc)

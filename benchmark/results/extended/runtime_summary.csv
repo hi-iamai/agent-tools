@@ -1,0 +1,5 @@
+﻿environment,runtime,runs,median_ms,p95_ms,median_output_bytes,success_rate
+windows,per_call_python,9,843.9303999912227,982.1411200013245,1934,1
+windows,per_call_rg,9,143.98330000403803,181.89763999835122,1885,1
+windows,persistent_http,9,777.3537000030046,933.7388000072679,1933,1
+windows,persistent_stdio,9,761.445600001025,975.341000003391,1970,1

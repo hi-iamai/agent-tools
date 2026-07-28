@@ -120,14 +120,144 @@
     "category": "regex",
     "prompt": "在 django/db/models/query.py 中列出所有名称以字母 a 开头的 async def 方法。只返回方法名及行号。不要修改文件。",
     "expected_regex": "^\\s+async def a\\w+\\(",
-    "expected_path": "django/db/models/query.py"
+    "expected_path": "django/db/models/query.py",
+    "expected_matches": [
+      {
+        "path": "django/db/models/query.py",
+        "line": 584,
+        "text": "async def aiterator(self, chunk_size=None):",
+        "symbol": "aiterator"
+      },
+      {
+        "path": "django/db/models/query.py",
+        "line": 663,
+        "text": "async def aaggregate(self, *args, **kwargs):",
+        "symbol": "aaggregate"
+      },
+      {
+        "path": "django/db/models/query.py",
+        "line": 679,
+        "text": "async def acount(self):",
+        "symbol": "acount"
+      },
+      {
+        "path": "django/db/models/query.py",
+        "line": 717,
+        "text": "async def aget(self, *args, **kwargs):",
+        "symbol": "aget"
+      },
+      {
+        "path": "django/db/models/query.py",
+        "line": 742,
+        "text": "async def acreate(self, **kwargs):",
+        "symbol": "acreate"
+      },
+      {
+        "path": "django/db/models/query.py",
+        "line": 955,
+        "text": "async def abulk_create(",
+        "symbol": "abulk_create"
+      },
+      {
+        "path": "django/db/models/query.py",
+        "line": 1035,
+        "text": "async def abulk_update(self, objs, fields, batch_size=None):",
+        "symbol": "abulk_update"
+      },
+      {
+        "path": "django/db/models/query.py",
+        "line": 1071,
+        "text": "async def aget_or_create(self, defaults=None, **kwargs):",
+        "symbol": "aget_or_create"
+      },
+      {
+        "path": "django/db/models/query.py",
+        "line": 1127,
+        "text": "async def aupdate_or_create(self, defaults=None, create_defaults=None, **kwargs):",
+        "symbol": "aupdate_or_create"
+      },
+      {
+        "path": "django/db/models/query.py",
+        "line": 1190,
+        "text": "async def aearliest(self, *fields):",
+        "symbol": "aearliest"
+      },
+      {
+        "path": "django/db/models/query.py",
+        "line": 1202,
+        "text": "async def alatest(self, *fields):",
+        "symbol": "alatest"
+      },
+      {
+        "path": "django/db/models/query.py",
+        "line": 1215,
+        "text": "async def afirst(self):",
+        "symbol": "afirst"
+      },
+      {
+        "path": "django/db/models/query.py",
+        "line": 1228,
+        "text": "async def alast(self):",
+        "symbol": "alast"
+      },
+      {
+        "path": "django/db/models/query.py",
+        "line": 1327,
+        "text": "async def ain_bulk(self, id_list=None, *, field_name=\"pk\"):",
+        "symbol": "ain_bulk"
+      },
+      {
+        "path": "django/db/models/query.py",
+        "line": 1366,
+        "text": "async def adelete(self):",
+        "symbol": "adelete"
+      },
+      {
+        "path": "django/db/models/query.py",
+        "line": 1427,
+        "text": "async def aupdate(self, **kwargs):",
+        "symbol": "aupdate"
+      },
+      {
+        "path": "django/db/models/query.py",
+        "line": 1461,
+        "text": "async def aexists(self):",
+        "symbol": "aexists"
+      },
+      {
+        "path": "django/db/models/query.py",
+        "line": 1485,
+        "text": "async def acontains(self, obj):",
+        "symbol": "acontains"
+      },
+      {
+        "path": "django/db/models/query.py",
+        "line": 1500,
+        "text": "async def aexplain(self, *, format=None, **options):",
+        "symbol": "aexplain"
+      }
+    ]
   },
   {
     "task_id": "regex_002",
     "category": "regex",
     "prompt": "找出 django/http/response.py 中所有 RemovedInDjango71Warning 的实际代码引用行，排除纯注释行。返回行号和简短上下文。不要修改文件。",
     "expected_regex": "RemovedInDjango71Warning",
-    "expected_path": "django/http/response.py"
+    "expected_path": "django/http/response.py",
+    "expected_matches": [
+      {
+        "path": "django/http/response.py",
+        "line": 23,
+        "text": "from django.utils.deprecation import RemovedInDjango71Warning",
+        "symbol": ""
+      },
+      {
+        "path": "django/http/response.py",
+        "line": 771,
+        "text": "category=RemovedInDjango71Warning,",
+        "symbol": ""
+      }
+    ]
   },
   {
     "task_id": "nohit_001",

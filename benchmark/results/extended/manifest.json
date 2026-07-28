@@ -1,0 +1,40 @@
+{
+  "generated_at_utc": "2026-07-28T17:42:08Z",
+  "platform": "Windows-2025Server-10.0.26100-SP0",
+  "repo_commit": "5e32c82a5a896e1d942cfc9dd9a2ebbe86741258",
+  "versions": {
+    "python": "Python 3.12.10",
+    "git": "git version 2.55.0.windows.3",
+    "ripgrep": "ripgrep 15.2.0 (rev e89fff89ac)",
+    "node": "v24.18.0",
+    "edge": "system Microsoft Edge; exact version unavailable in headless singleton environment"
+  },
+  "config_sha256": "634091fb4caa4e165bbaf58ae7ad95266cf58bf3d0164c2cc2f0ae25b985b2e1",
+  "data_sha256": {
+    "agent_tasks.json": "c4fe87da6962b8575410cab7807ac6cf6be7c48a24ab6211b5183a83bafab130",
+    "ast_queries.json": "acb892377386948a3b990c1a25ba913f6c40ce1c99474fa6b3cdd8e5e78c8e3a",
+    "micro_queries.json": "03f04446591ee12457255bd405b50316c3506766fef1dda9722f69689a5881ed"
+  },
+  "script_sha256": {
+    "agent_eval.py": "c3bb736f175aff949ec15ecfa438eab4646ee2d6dd1ab9679b77962b9e5d325e",
+    "analyze.py": "a8dcea8c5076a00c7a1f629019eb68f2f082f3dcb1a8f6fa1126dddc2df977fb",
+    "api_fetch_bench.py": "2af8187c536ba0aded30e4c2957c3a4e8a98dbe539d24ede0749e327bf6f22ec",
+    "browser_fetch_bench.mjs": "31e20398d2c03db2fe58d0ddc726aa318a5cd6ebd91a1a6967c6f2e2c31b0651",
+    "common.py": "11452fe273d3a6862a9ba5f39bcde603cae891d86ce4446d9f6ee66a37b71e5a",
+    "extended_analyze.py": "88944894842c72d014fadfec045a887672836741b525bfd4056ffcd3cadc6d77",
+    "extended_search_bench.py": "dee4d2ffbb33760c7d8631606a30924508b49a347a097ce98f740e6180f74881",
+    "generate_manifest.py": "c46473cb9666e85c3c13f161d9f1366113359dbc16afead264267a33a0f38f2c",
+    "git_tool_bench.py": "66a4c0674364b02a481a5072ad7732cc908434bd5cda7881d45f007741ab9261",
+    "index_lifecycle_bench.py": "ee9d7c258dc8802a8d6cc1f6e58d0efdb1d53404fc81543c9ea862b617bf3744",
+    "io_tool_bench.py": "e9b295f6bf49c768a13b234d3bca9269d5684e3306682e910b860d0e2c367ec0",
+    "microbench.py": "87c114e6576d5af95a9b2943e36c05846f160d81641f825063409bb147d1fd23",
+    "prepare_dataset.py": "b29fa6b8f6970642958c6b87074d18b3657dda715339442d511abdd13cdbdaec",
+    "regrade_agent.py": "a654ece0d1f5799f38b32c3ba12b7c7a5e8b560cc959dec41339e613c91198e5",
+    "runtime_bench.py": "01db42b69c894d8b7311824455adfd078f3424dd6981d97e1b4dd757d4f074f0",
+    "runtime_http_server.py": "80f1de20b12b85095702dc678ac5258ae9066132c791e8bf0b2c463546ebf674",
+    "runtime_worker.py": "830f1e6fa5fac22989cdf7c66d75f5e5f075594ad2e1b86e32139524727a1ff9",
+    "structure_bench.py": "0c6ca2e7832f5072c3a98f67aa8a9a887436929118c3aff7aad17b838c19d2d3",
+    "web_fixture_server.py": "632087450e6e2183a055bda992d551b0d2c30d924a147d845e5a334e32bf90a8",
+    "webfetch_bench.py": "d7ffede0cfa7a50bec1745f64e48bcd00a08da17ca50676c9a4be5a4ba8e123f"
+  }
+}

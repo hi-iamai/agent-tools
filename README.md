@@ -1,22 +1,32 @@
 # Agent Tools Research and Benchmark
 
-Agent 底层 Tool 方案调研、可复现测试集、Backend 微基准，以及固定模型下的 Tool Surface 对比实验。
+Agent 底层 Tool、Backend、结果处理与运行形态的可复现评测工程。
 
-## 核心结果
+## 当前状态
 
-在同一模型和同一 `ripgrep` backend 下，本轮 Windows 本机实验结果为：
+项目仍在进行中，当前不存在“最终唯一方案”。已完成的主要阶段包括：
 
-| Tool Surface | 成功率 | 中位时延 | 中位工具调用 |
-|---|---:|---:|---:|
-| Dedicated `glob/grep/read_file` | **91.7%** | **12.52s** | **2.5** |
-| Shell Only | 75.0% | 14.01s | 3.0 |
-| Minimal Router | 50.0% | 18.43s | 5.5 |
+- 固定 `ripgrep` Backend 的 Tool Surface Pilot；
+- Windows/WSL 文件、文本和 SQLite FTS5 搜索；
+- ripgrep、ast-grep、Python AST 结构查询；
+- WebFetch、HTML 抽取、Playwright 浏览器渲染；
+- API 分页、gzip、redirect、429、500、连接池和并发。
 
-详细方法、限制和建议参见：
+文档入口：
 
-- [`docs/research/agent_tool最终报告.md`](docs/research/agent_tool最终报告.md)
-- [`docs/research/tool调研.md`](docs/research/tool调研.md)
-- [`docs/research/tool调研2.md`](docs/research/tool调研2.md)
+- [`docs/research/README.md`](docs/research/README.md)
+- [`docs/research/全面评测计划.md`](docs/research/全面评测计划.md)
+- [`docs/research/扩展评测阶段结果.md`](docs/research/扩展评测阶段结果.md)
+
+历史 Phase 0 数据在修正 regex 判题后为：
+
+| Tool Surface | 成功率 |
+|---|---:|
+| Dedicated `glob/grep/read_file` | 87.5% |
+| Shell Only | 70.8% |
+| Minimal Router | 50.0% |
+
+这只说明 Tool Surface 是重要变量，不代表完整 Tool 方案排名。
 
 ## 目录
 
@@ -53,4 +63,3 @@ AGENT_MAX_COST_USD=
 ```
 
 `.env`、依赖目录和克隆的被测仓库不会提交到 Git。
-

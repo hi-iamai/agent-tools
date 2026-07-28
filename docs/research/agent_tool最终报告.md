@@ -1,5 +1,10 @@
 # Agent Tool 调研、跑测评估与最终建议
 
+> **状态说明（2026-07-29）：本报告已降级为 Phase 0 Tool Surface Pilot。**
+> 后续扩展评测已经覆盖搜索、索引、结构、WebFetch、Browser 与 API Tool；
+> 当前文档不再代表项目最终结论。请优先阅读
+> [`README.md`](README.md) 和 [`扩展评测阶段结果.md`](扩展评测阶段结果.md)。
+
 > 评测日期：2026-07-28  
 > 环境：Windows / PowerShell，本机原生运行  
 > 代码仓：Django，固定 commit `5e32c82a5a896e1d942cfc9dd9a2ebbe86741258`  
@@ -32,13 +37,13 @@
 
 | Tool Surface | 成功率 | 中位时延 | P95 时延 | 中位工具调用 | 中位输入 Token | 中位成本 |
 |---|---:|---:|---:|---:|---:|---:|
-| 专用 Tools | **91.7%** | **12.52s** | **27.02s** | **2.5** | 4,875 | $0.0268 |
-| Shell Only | 75.0% | 14.01s | 29.94s | 3.0 | **4,353** | **$0.0238** |
+| 专用 Tools | **87.5%** | **12.52s** | **27.02s** | **2.5** | 4,875 | $0.0268 |
+| Shell Only | 70.8% | 14.01s | 29.94s | 3.0 | **4,353** | **$0.0238** |
 | 单一 Router | 50.0% | 18.43s | 37.10s | 5.5 | 9,665 | $0.0464 |
 
 专用 Tool 相对 Shell：
 
-- 成功率提高 **16.7 个百分点**；
+- 成功率提高 **16.7 个百分点**（修正后的 87.5% 对 70.8%，四舍五入）；
 - 中位时延下降约 **10.6%**；
 - 中位调用数下降约 **16.7%**；
 - 成本略高约 **12.6%**，但每个成功任务的预期成本更有优势。
@@ -441,4 +446,3 @@ natural language → 后续 hybrid retrieval
 - `benchmark/results/microbench_raw.jsonl`：312 条原始微基准；
 - `benchmark/results/agent_eval_raw.jsonl`：72 条 Agent run；
 - `benchmark/results/summary.json`：最终汇总。
-

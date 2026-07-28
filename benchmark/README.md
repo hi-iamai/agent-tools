@@ -49,6 +49,12 @@ python benchmark/scripts/webfetch_bench.py --repeats 5 --environment windows --o
 python benchmark/scripts/api_fetch_bench.py --repeats 3 --environment windows --output-dir benchmark/results/extended
 node benchmark/scripts/browser_fetch_bench.mjs --repeats 3 --environment windows --output benchmark/results/extended/browser_fetch_windows.jsonl
 
+python benchmark/scripts/structure_bench.py --repeats 3 --environment windows --output-dir benchmark/results/extended
+python benchmark/scripts/index_lifecycle_bench.py --output-dir benchmark/results/extended
+python benchmark/scripts/runtime_bench.py --repeats 3 --environment windows --output-dir benchmark/results/extended
+python benchmark/scripts/git_tool_bench.py --repeats 5 --environment windows --output-dir benchmark/results/extended
+python benchmark/scripts/io_tool_bench.py --repeats 5 --environment windows --output-dir benchmark/results/extended
+python benchmark/scripts/generate_manifest.py
 python benchmark/scripts/extended_analyze.py
 ```
 

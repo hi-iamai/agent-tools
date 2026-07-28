@@ -1,0 +1,16 @@
+{
+  "build": {
+    "build_ms": 37663.852400000906,
+    "size_bytes": 135049216,
+    "files": 5695,
+    "lines": 1111100
+  },
+  "add_ms": 285.9745000023395,
+  "add_visible": true,
+  "update_ms": 225.48100000130944,
+  "old_visible_after_update": false,
+  "new_visible_after_update": true,
+  "delete_ms": 213.9986999973189,
+  "deleted_visible_after_delete": false,
+  "reopen_ms": 151.1093000008259
+}

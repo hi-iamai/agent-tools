@@ -49,9 +49,24 @@ class Handler(BaseHTTPRequestHandler):
             return self.send_body((f"<html><body>{'<aside>noise</aside>' * 2000}{ARTICLE}{'<p>tail</p>' * 5000}</body></html>").encode())
         if path == "/dynamic":
             html = """<html><body><div id='app'>Loading...</div>
-            <script>document.getElementById('app').innerHTML='<article><h1>Dynamic</h1><p>The dynamic answer is COBALT-318.</p></article>';</script>
+            <script>
+            fetch('/api/dynamic-content').then(r => r.json()).then(data => {
+              const article = document.createElement('article');
+              const heading = document.createElement('h1');
+              heading.textContent = 'Dynamic';
+              const paragraph = document.createElement('p');
+              paragraph.textContent = data.message;
+              article.append(heading, paragraph);
+              document.getElementById('app').replaceChildren(article);
+            });
+            </script>
             </body></html>"""
             return self.send_body(html.encode())
+        if path == "/api/dynamic-content":
+            return self.send_body(
+                json.dumps({"message": "The dynamic answer is COBALT-318."}).encode(),
+                content_type="application/json",
+            )
         if path == "/redirect":
             self.send_response(302)
             self.send_header("Location", "/static")
@@ -71,7 +86,7 @@ class Handler(BaseHTTPRequestHandler):
                        "next": f"/api/page?page={page + 1}" if page < 3 else None}
             return self.send_body(json.dumps(payload).encode(), content_type="application/json")
         if path == "/api/rate-limit":
-            key = self.client_address[0]
+            key = parse_qs(parsed.query).get("run_id", [self.client_address[0]])[0]
             self.counters[key] = self.counters.get(key, 0) + 1
             if self.counters[key] <= 2:
                 return self.send_body(b'{"error":"rate limited"}', 429, "application/json", {"Retry-After": "1"})

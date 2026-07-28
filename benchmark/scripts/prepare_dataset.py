@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 from common import BENCH, DATA, ROOT, json_dump, load_config, run
@@ -130,6 +131,23 @@ def main() -> None:
         if pattern:
             r = run(["rg", "--files", "-g", pattern], repo, check=False)
             task["expected_files"] = sorted(p.replace("\\", "/") for p in r["stdout"].splitlines())
+        if task.get("expected_regex"):
+            target = repo / task["expected_path"]
+            regex = re.compile(task["expected_regex"])
+            task["expected_matches"] = [
+                {
+                    "path": task["expected_path"],
+                    "line": line_no,
+                    "text": line.strip(),
+                    "symbol": (
+                        re.search(r"async def\s+(\w+)", line).group(1)
+                        if re.search(r"async def\s+(\w+)", line)
+                        else ""
+                    ),
+                }
+                for line_no, line in enumerate(target.read_text(encoding="utf-8").splitlines(), 1)
+                if regex.search(line) and not line.lstrip().startswith("#")
+            ]
     json_dump(DATA / "agent_tasks.json", AGENT_TASKS)
     json_dump(DATA / "micro_queries.json", MICRO_QUERIES)
     json_dump(DATA / "ast_queries.json", AST_QUERIES)

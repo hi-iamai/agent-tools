@@ -77,8 +77,8 @@
     {
       "surface": "dedicated",
       "runs": 24,
-      "success_rate": 0.9166666666666666,
-      "mean_score": 0.9722222222222222,
+      "success_rate": 0.875,
+      "mean_score": 0.9583333333333334,
       "median_duration_ms": 12524.5578499962,
       "p95_duration_ms": 27021.45289500112,
       "median_tool_calls": 2.5,
@@ -101,8 +101,8 @@
     {
       "surface": "shell",
       "runs": 24,
-      "success_rate": 0.75,
-      "mean_score": 0.8333333333333334,
+      "success_rate": 0.7083333333333334,
+      "mean_score": 0.8194444444444444,
       "median_duration_ms": 14007.882350000727,
       "p95_duration_ms": 29936.975244996567,
       "median_tool_calls": 3.0,
@@ -137,8 +137,8 @@
       "surface": "dedicated",
       "category": "regex",
       "runs": 4,
-      "success_rate": 1.0,
-      "mean_score": 1.0
+      "success_rate": 0.75,
+      "mean_score": 0.9166666666666666
     },
     {
       "surface": "dedicated",
@@ -207,8 +207,8 @@
       "surface": "shell",
       "category": "regex",
       "runs": 4,
-      "success_rate": 1.0,
-      "mean_score": 1.0
+      "success_rate": 0.75,
+      "mean_score": 0.9166666666666666
     },
     {
       "surface": "shell",
