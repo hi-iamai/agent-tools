@@ -62,6 +62,8 @@ python benchmark/scripts/websearch_bench.py --repeats 5 --output-dir benchmark/r
 python benchmark/scripts/provider_capability_probe.py
 python benchmark/scripts/multirepo_search_bench.py --repeats 3 --output-dir benchmark/results/extended
 python benchmark/scripts/patch_tool_bench.py --repeats 20 --output-dir benchmark/results/extended
+# MCP 2.0 SDK is currently exercised in WSL:
+python benchmark/scripts/mcp_runtime_bench.py --repo /path/to/repo --repeats 3 --output benchmark/results/extended/mcp_runtime_wsl.jsonl
 python benchmark/scripts/generate_manifest.py
 python benchmark/scripts/extended_analyze.py
 ```

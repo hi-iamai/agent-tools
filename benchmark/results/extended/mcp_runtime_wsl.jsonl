@@ -1,0 +1,9 @@
+{"runtime": "mcp_stdio", "query": "RemovedInDjango71Warning", "repeat": 0, "duration_ms": 2906.145499990089, "is_error": false, "content_blocks": 1}
+{"runtime": "mcp_stdio", "query": "get_user_model", "repeat": 0, "duration_ms": 2775.7109999947716, "is_error": false, "content_blocks": 1}
+{"runtime": "mcp_stdio", "query": "QuantumCacheTeleport", "repeat": 0, "duration_ms": 3459.3682999984594, "is_error": false, "content_blocks": 1}
+{"runtime": "mcp_stdio", "query": "RemovedInDjango71Warning", "repeat": 1, "duration_ms": 3142.961400008062, "is_error": false, "content_blocks": 1}
+{"runtime": "mcp_stdio", "query": "get_user_model", "repeat": 1, "duration_ms": 2766.6275999945356, "is_error": false, "content_blocks": 1}
+{"runtime": "mcp_stdio", "query": "QuantumCacheTeleport", "repeat": 1, "duration_ms": 2928.4430999978213, "is_error": false, "content_blocks": 1}
+{"runtime": "mcp_stdio", "query": "RemovedInDjango71Warning", "repeat": 2, "duration_ms": 2795.4240999970352, "is_error": false, "content_blocks": 1}
+{"runtime": "mcp_stdio", "query": "get_user_model", "repeat": 2, "duration_ms": 2926.318199999514, "is_error": false, "content_blocks": 1}
+{"runtime": "mcp_stdio", "query": "QuantumCacheTeleport", "repeat": 2, "duration_ms": 2784.2144000023836, "is_error": false, "content_blocks": 1}

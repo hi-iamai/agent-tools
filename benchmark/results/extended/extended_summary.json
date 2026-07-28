@@ -10914,5 +10914,14 @@
       "median_output_bytes": 0.0,
       "success_rate": 1
     }
+  ],
+  "mcp_runtime": [
+    {
+      "runtime": "mcp_stdio",
+      "runs": 9,
+      "median_ms": 2906.145499990089,
+      "p95_ms": 3332.8055400023004,
+      "error_rate": 0
+    }
   ]
 }

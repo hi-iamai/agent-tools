@@ -4,6 +4,7 @@ fastembed==0.7.3
 httpx==0.28.1
 jedi==0.19.2
 lxml==6.1.1
+mcp==2.0.0
 readability-lxml==0.8.4.1
 requests==2.34.2
 selectolax==0.4.11

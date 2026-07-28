@@ -191,6 +191,7 @@ def main() -> None:
     intelligence_rows = []
     multirepo_rows = []
     patch_rows = []
+    mcp_rows = []
     for path in base.glob("extended_search_*.jsonl"):
         search_rows.extend(read_jsonl(path))
     for path in base.glob("webfetch_*.jsonl"):
@@ -215,6 +216,8 @@ def main() -> None:
         multirepo_rows.extend(read_jsonl(path))
     for path in base.glob("patch_tools_*.jsonl"):
         patch_rows.extend(read_jsonl(path))
+    for path in base.glob("mcp_runtime_*.jsonl"):
+        mcp_rows.extend(read_jsonl(path))
     summary = {
         "search": summarize_search(search_rows),
         "webfetch": summarize_web(web_rows),
@@ -272,6 +275,15 @@ def main() -> None:
             }.items())
         ],
         "patch_tools": summarize_generic(patch_rows, ["tool"]),
+        "mcp_runtime": [
+            {
+                "runtime": "mcp_stdio",
+                "runs": len(mcp_rows),
+                "median_ms": statistics.median(x["duration_ms"] for x in mcp_rows) if mcp_rows else math.nan,
+                "p95_ms": percentile([x["duration_ms"] for x in mcp_rows], 0.95),
+                "error_rate": statistics.mean(bool(x["is_error"]) for x in mcp_rows) if mcp_rows else 0,
+            }
+        ] if mcp_rows else [],
     }
     json_dump(base / "extended_summary.json", summary)
     write_csv(base / "search_summary.csv", summary["search"])
@@ -286,6 +298,7 @@ def main() -> None:
     write_csv(base / "code_intelligence_summary.csv", summary["code_intelligence"])
     write_csv(base / "multirepo_search_summary.csv", summary["multirepo_search"])
     write_csv(base / "patch_tools_summary.csv", summary["patch_tools"])
+    write_csv(base / "mcp_runtime_summary.csv", summary["mcp_runtime"])
     print(json.dumps({key: len(value) for key, value in summary.items()}, indent=2))
 
 

@@ -38,6 +38,10 @@ def main() -> None:
             "node": command_version(["node", "--version"]),
             "edge": "system Microsoft Edge; exact version unavailable in headless singleton environment",
         },
+        "environment_notes": {
+            "windows": "Windows native",
+            "wsl": "Ubuntu 24.04 WSL1; not a native Linux kernel benchmark",
+        },
         "config_sha256": sha256(BENCH / "config.json"),
         "data_sha256": {
             path.name: sha256(path)

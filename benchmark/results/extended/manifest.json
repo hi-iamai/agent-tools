@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-28T18:06:46Z",
+  "generated_at_utc": "2026-07-28T18:11:21Z",
   "platform": "Windows-2025Server-10.0.26100-SP0",
   "repo_commit": "5e32c82a5a896e1d942cfc9dd9a2ebbe86741258",
   "versions": {
@@ -8,6 +8,10 @@
     "ripgrep": "ripgrep 15.2.0 (rev e89fff89ac)",
     "node": "v24.18.0",
     "edge": "system Microsoft Edge; exact version unavailable in headless singleton environment"
+  },
+  "environment_notes": {
+    "windows": "Windows native",
+    "wsl": "Ubuntu 24.04 WSL1; not a native Linux kernel benchmark"
   },
   "config_sha256": "634091fb4caa4e165bbaf58ae7ad95266cf58bf3d0164c2cc2f0ae25b985b2e1",
   "data_sha256": {
@@ -22,12 +26,14 @@
     "browser_fetch_bench.mjs": "31e20398d2c03db2fe58d0ddc726aa318a5cd6ebd91a1a6967c6f2e2c31b0651",
     "code_intelligence_bench.py": "f4175440d7ba6f575d23936441f1031168a083a4ec20bcffeb669a9c07cafa2b",
     "common.py": "11452fe273d3a6862a9ba5f39bcde603cae891d86ce4446d9f6ee66a37b71e5a",
-    "extended_analyze.py": "c9b69c7580438e4156ce7042eaa985cf556ae8fe7db7040a0e6ed6305ba2215f",
+    "extended_analyze.py": "0e2ae093585f332b37e95571e26bb1ea66bd733c2aab1936f43c86b6492cf0e4",
     "extended_search_bench.py": "dee4d2ffbb33760c7d8631606a30924508b49a347a097ce98f740e6180f74881",
-    "generate_manifest.py": "c46473cb9666e85c3c13f161d9f1366113359dbc16afead264267a33a0f38f2c",
+    "generate_manifest.py": "51b099687c42ba9cd290add0b9028a2257eb441b14e24a9d01bdc352f1ea7ec9",
     "git_tool_bench.py": "66a4c0674364b02a481a5072ad7732cc908434bd5cda7881d45f007741ab9261",
     "index_lifecycle_bench.py": "ee9d7c258dc8802a8d6cc1f6e58d0efdb1d53404fc81543c9ea862b617bf3744",
     "io_tool_bench.py": "e9b295f6bf49c768a13b234d3bca9269d5684e3306682e910b860d0e2c367ec0",
+    "mcp_runtime_bench.py": "203dd441549293d57f8277bf795847ffaeed473cbbe0c96a4ef11c150e1c343f",
+    "mcp_search_server.py": "f49b66f2781c54356f067de38521a4090a8df2d13a9504a30da924b57b5df5ff",
     "microbench.py": "87c114e6576d5af95a9b2943e36c05846f160d81641f825063409bb147d1fd23",
     "multirepo_search_bench.py": "7aa9775a120888b84ffdd94ecc99fc533f107e181fd9681ec7e1f80ad95a0590",
     "patch_tool_bench.py": "c59ad6b153220db246cf6fd0d64c6d0b764cb205867b2cdbee1e9ec3c4de4dd1",
