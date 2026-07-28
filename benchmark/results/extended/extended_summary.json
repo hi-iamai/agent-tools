@@ -10805,5 +10805,114 @@
       "p95_ms": 3398.31513999452,
       "error_rate": 0
     }
+  ],
+  "multirepo_search": [
+    {
+      "repo": "black",
+      "backend": "git_grep",
+      "runs": 18,
+      "mean_precision": 1.0,
+      "mean_recall": 1.0,
+      "median_ms": 46.565550001105294,
+      "p95_ms": 52.26891000420436
+    },
+    {
+      "repo": "black",
+      "backend": "python_scan",
+      "runs": 18,
+      "mean_precision": 1.0,
+      "mean_recall": 1.0,
+      "median_ms": 43.956850000540726,
+      "p95_ms": 53.43845000534199
+    },
+    {
+      "repo": "black",
+      "backend": "rg",
+      "runs": 18,
+      "mean_precision": 1.0,
+      "mean_recall": 1.0,
+      "median_ms": 34.05234999809181,
+      "p95_ms": 38.99166999544832
+    },
+    {
+      "repo": "django",
+      "backend": "git_grep",
+      "runs": 18,
+      "mean_precision": 0.6666666666666666,
+      "mean_recall": 0.6666666666666666,
+      "median_ms": 70.9853500011377,
+      "p95_ms": 106.30029498861401
+    },
+    {
+      "repo": "django",
+      "backend": "python_scan",
+      "runs": 18,
+      "mean_precision": 1.0,
+      "mean_recall": 1.0,
+      "median_ms": 402.4931500025559,
+      "p95_ms": 528.1583050003974
+    },
+    {
+      "repo": "django",
+      "backend": "rg",
+      "runs": 18,
+      "mean_precision": 0.6666666666666666,
+      "mean_recall": 0.6666666666666666,
+      "median_ms": 89.5442999972147,
+      "p95_ms": 113.09441999328554
+    },
+    {
+      "repo": "pytest",
+      "backend": "git_grep",
+      "runs": 18,
+      "mean_precision": 0.9555555555555555,
+      "mean_recall": 0.9555555555555555,
+      "median_ms": 46.06199999398086,
+      "p95_ms": 56.93044499639652
+    },
+    {
+      "repo": "pytest",
+      "backend": "python_scan",
+      "runs": 18,
+      "mean_precision": 1.0,
+      "mean_recall": 1.0,
+      "median_ms": 42.77599999477388,
+      "p95_ms": 58.323820000805426
+    },
+    {
+      "repo": "pytest",
+      "backend": "rg",
+      "runs": 18,
+      "mean_precision": 0.9555555555555555,
+      "mean_recall": 0.9555555555555555,
+      "median_ms": 29.53160000470234,
+      "p95_ms": 33.28665000080945
+    }
+  ],
+  "patch_tools": [
+    {
+      "tool": "git_apply",
+      "runs": 20,
+      "median_ms": 51.07859999407083,
+      "p95_ms": 63.53046500153142,
+      "median_output_bytes": 0.0,
+      "success_rate": 1
+    },
+    {
+      "tool": "patch_conflict",
+      "runs": 20,
+      "median_ms": 51.90435000258731,
+      "p95_ms": 61.24006999962149,
+      "median_output_bytes": 0.0,
+      "success_rate": 1
+    },
+    {
+      "tool": "python_replace",
+      "runs": 20,
+      "median_ms": 2.8912999987369403,
+      "p95_ms": 3.656630002660677,
+      "median_output_bytes": 0.0,
+      "success_rate": 1
+    }
   ]
 }

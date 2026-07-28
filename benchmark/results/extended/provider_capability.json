@@ -1,0 +1,7 @@
+{
+  "model": "claude-sonnet-4-6",
+  "capability": "native_web_search",
+  "supported": false,
+  "status": 400,
+  "error": "{\"error\":{\"message\":\"litellm.UnsupportedParamsError: bedrock does not support parameters: ['web_search_options'], for model=converse/arn:aws:bedrock:us-west-2:430118831465:application-inference-profile/t1ptybzkhw89. To drop these, set `litellm.drop_params=True` or for proxy:\\n\\n`litellm_settings:\\n drop_params: true`\\n. \\n If you want to use these params dynamically send allowed_openai_params=['web_search_options'] in your request.. Received Model Group=claude-sonnet-4-6\\nAvailable Model Group Fallbacks=None\",\"type\":\"None\",\"param\":null,\"code\":\"400\"}}"
+}

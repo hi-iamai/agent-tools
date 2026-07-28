@@ -189,6 +189,8 @@ def main() -> None:
     io_rows = []
     websearch_rows = []
     intelligence_rows = []
+    multirepo_rows = []
+    patch_rows = []
     for path in base.glob("extended_search_*.jsonl"):
         search_rows.extend(read_jsonl(path))
     for path in base.glob("webfetch_*.jsonl"):
@@ -209,6 +211,10 @@ def main() -> None:
         websearch_rows.extend(read_jsonl(path))
     for path in base.glob("code_intelligence_*.jsonl"):
         intelligence_rows.extend(read_jsonl(path))
+    for path in base.glob("multirepo_search*.jsonl"):
+        multirepo_rows.extend(read_jsonl(path))
+    for path in base.glob("patch_tools_*.jsonl"):
+        patch_rows.extend(read_jsonl(path))
     summary = {
         "search": summarize_search(search_rows),
         "webfetch": summarize_web(web_rows),
@@ -248,6 +254,24 @@ def main() -> None:
                 for method in {x["method"] for x in intelligence_rows}
             }.items())
         ],
+        "multirepo_search": [
+            {
+                "repo": repo,
+                "backend": backend,
+                "runs": len(values),
+                "mean_precision": statistics.mean(x["precision"] for x in values),
+                "mean_recall": statistics.mean(x["recall"] for x in values),
+                "median_ms": statistics.median(x["duration_ms"] for x in values),
+                "p95_ms": percentile([x["duration_ms"] for x in values], 0.95),
+            }
+            for (repo, backend), values in sorted({
+                (repo, backend): [
+                    x for x in multirepo_rows if x["repo"] == repo and x["backend"] == backend
+                ]
+                for repo, backend in {(x["repo"], x["backend"]) for x in multirepo_rows}
+            }.items())
+        ],
+        "patch_tools": summarize_generic(patch_rows, ["tool"]),
     }
     json_dump(base / "extended_summary.json", summary)
     write_csv(base / "search_summary.csv", summary["search"])
@@ -260,6 +284,8 @@ def main() -> None:
     write_csv(base / "io_tools_summary.csv", summary["io_tools"])
     write_csv(base / "websearch_summary.csv", summary["websearch"])
     write_csv(base / "code_intelligence_summary.csv", summary["code_intelligence"])
+    write_csv(base / "multirepo_search_summary.csv", summary["multirepo_search"])
+    write_csv(base / "patch_tools_summary.csv", summary["patch_tools"])
     print(json.dumps({key: len(value) for key, value in summary.items()}, indent=2))
 
 
