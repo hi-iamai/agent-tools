@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-28T17:42:08Z",
+  "generated_at_utc": "2026-07-28T17:47:12Z",
   "platform": "Windows-2025Server-10.0.26100-SP0",
   "repo_commit": "5e32c82a5a896e1d942cfc9dd9a2ebbe86741258",
   "versions": {
@@ -21,7 +21,7 @@
     "api_fetch_bench.py": "2af8187c536ba0aded30e4c2957c3a4e8a98dbe539d24ede0749e327bf6f22ec",
     "browser_fetch_bench.mjs": "31e20398d2c03db2fe58d0ddc726aa318a5cd6ebd91a1a6967c6f2e2c31b0651",
     "common.py": "11452fe273d3a6862a9ba5f39bcde603cae891d86ce4446d9f6ee66a37b71e5a",
-    "extended_analyze.py": "88944894842c72d014fadfec045a887672836741b525bfd4056ffcd3cadc6d77",
+    "extended_analyze.py": "b1f01dd8cd7280331d0ed2396c0ad04e02516204853214fd837d92a4743d0173",
     "extended_search_bench.py": "dee4d2ffbb33760c7d8631606a30924508b49a347a097ce98f740e6180f74881",
     "generate_manifest.py": "c46473cb9666e85c3c13f161d9f1366113359dbc16afead264267a33a0f38f2c",
     "git_tool_bench.py": "66a4c0674364b02a481a5072ad7732cc908434bd5cda7881d45f007741ab9261",
@@ -35,6 +35,7 @@
     "runtime_worker.py": "830f1e6fa5fac22989cdf7c66d75f5e5f075594ad2e1b86e32139524727a1ff9",
     "structure_bench.py": "0c6ca2e7832f5072c3a98f67aa8a9a887436929118c3aff7aad17b838c19d2d3",
     "web_fixture_server.py": "632087450e6e2183a055bda992d551b0d2c30d924a147d845e5a334e32bf90a8",
-    "webfetch_bench.py": "d7ffede0cfa7a50bec1745f64e48bcd00a08da17ca50676c9a4be5a4ba8e123f"
+    "webfetch_bench.py": "d7ffede0cfa7a50bec1745f64e48bcd00a08da17ca50676c9a4be5a4ba8e123f",
+    "websearch_bench.py": "e3b0d77cbdc428be96b463df9253ee09288c47241e7946a3095c36af5aef25d2"
   }
 }

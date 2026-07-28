@@ -187,6 +187,7 @@ def main() -> None:
     runtime_rows = []
     git_rows = []
     io_rows = []
+    websearch_rows = []
     for path in base.glob("extended_search_*.jsonl"):
         search_rows.extend(read_jsonl(path))
     for path in base.glob("webfetch_*.jsonl"):
@@ -203,6 +204,8 @@ def main() -> None:
         git_rows.extend(read_jsonl(path))
     for path in base.glob("io_tools_*.jsonl"):
         io_rows.extend(read_jsonl(path))
+    for path in base.glob("websearch_*.jsonl"):
+        websearch_rows.extend(read_jsonl(path))
     summary = {
         "search": summarize_search(search_rows),
         "webfetch": summarize_web(web_rows),
@@ -212,6 +215,21 @@ def main() -> None:
         "runtime": summarize_generic(runtime_rows, ["environment", "runtime"]),
         "git_tools": summarize_generic(git_rows, ["environment", "tool"]),
         "io_tools": summarize_generic(io_rows, ["environment", "tool"]),
+        "websearch": [
+            {
+                "method": method,
+                "runs": len(values),
+                "mean_recall_at_5": statistics.mean(x["recall_at_5"] for x in values),
+                "mean_mrr": statistics.mean(x["mrr"] for x in values),
+                "mean_ndcg_at_5": statistics.mean(x["ndcg_at_5"] for x in values),
+                "median_ms": statistics.median(x["duration_ms"] for x in values),
+                "p95_ms": percentile([x["duration_ms"] for x in values], 0.95),
+            }
+            for method, values in sorted({
+                method: [x for x in websearch_rows if x["method"] == method]
+                for method in {x["method"] for x in websearch_rows}
+            }.items())
+        ],
     }
     json_dump(base / "extended_summary.json", summary)
     write_csv(base / "search_summary.csv", summary["search"])
@@ -222,6 +240,7 @@ def main() -> None:
     write_csv(base / "runtime_summary.csv", summary["runtime"])
     write_csv(base / "git_tools_summary.csv", summary["git_tools"])
     write_csv(base / "io_tools_summary.csv", summary["io_tools"])
+    write_csv(base / "websearch_summary.csv", summary["websearch"])
     print(json.dumps({key: len(value) for key, value in summary.items()}, indent=2))
 
 

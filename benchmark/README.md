@@ -41,6 +41,9 @@ The extended benchmark covers multiple search backends, indexed search,
 WebFetch extractors, browser rendering, and API clients:
 
 ```powershell
+python -m pip install -r benchmark/requirements-extended.txt
+npm install --no-save playwright-core @ast-grep/cli
+
 python benchmark/scripts/extended_search_bench.py --repeats 5 --environment windows --output-dir benchmark/results/extended
 
 python benchmark/scripts/web_fixture_server.py --host 127.0.0.1 --port 8765
@@ -54,6 +57,7 @@ python benchmark/scripts/index_lifecycle_bench.py --output-dir benchmark/results
 python benchmark/scripts/runtime_bench.py --repeats 3 --environment windows --output-dir benchmark/results/extended
 python benchmark/scripts/git_tool_bench.py --repeats 5 --environment windows --output-dir benchmark/results/extended
 python benchmark/scripts/io_tool_bench.py --repeats 5 --environment windows --output-dir benchmark/results/extended
+python benchmark/scripts/websearch_bench.py --repeats 5 --output-dir benchmark/results/extended
 python benchmark/scripts/generate_manifest.py
 python benchmark/scripts/extended_analyze.py
 ```

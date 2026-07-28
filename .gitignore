@@ -6,6 +6,7 @@
 # Dependencies and caches
 node_modules/
 .npm-cache/
+benchmark/vendor/
 __pycache__/
 *.py[cod]
 .pytest_cache/

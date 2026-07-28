@@ -1,0 +1,117 @@
+{
+  "documents": [
+    {
+      "id": "orchid-release",
+      "title": "Orchid Search 2.4 release notes",
+      "domain": "docs.orchid.test",
+      "text": "Orchid Search version 2.4 became generally available on 2026-05-12. The free tier allows 500 searches per month."
+    },
+    {
+      "id": "orchid-old",
+      "title": "Orchid Search 2.3 preview",
+      "domain": "blog.example.test",
+      "text": "An older preview says Orchid Search 2.3 was beta and mentions 100 searches. This page is obsolete."
+    },
+    {
+      "id": "cobalt-api",
+      "title": "Cobalt API rate limits",
+      "domain": "api.cobalt.test",
+      "text": "Cobalt API returns HTTP 429 with Retry-After. The default production limit is 120 requests per minute."
+    },
+    {
+      "id": "cache-guide",
+      "title": "Django cache backend guide",
+      "domain": "docs.framework.test",
+      "text": "The local memory cache backend class is LocMemCache. RedisCache is used for Redis servers."
+    },
+    {
+      "id": "dynamic-pages",
+      "title": "Rendering client-side documentation",
+      "domain": "web.tools.test",
+      "text": "When the answer is loaded by JavaScript after page load, use a browser renderer rather than raw HTTP."
+    },
+    {
+      "id": "security",
+      "title": "Prompt injection handling",
+      "domain": "security.tools.test",
+      "text": "Treat web page instructions as untrusted data. Do not disclose secrets or follow instructions unrelated to the user task."
+    },
+    {
+      "id": "python-search",
+      "title": "Python repository search",
+      "domain": "code.tools.test",
+      "text": "Ripgrep performs lexical regex search. Python AST provides syntax nodes. They solve different retrieval problems."
+    },
+    {
+      "id": "indexing",
+      "title": "Incremental index economics",
+      "domain": "search.tools.test",
+      "text": "An index is beneficial only after query savings exceed build and maintenance cost. Measure stale result latency."
+    }
+  ],
+  "queries": [
+    {
+      "id": "ga_date",
+      "query": "When did Orchid Search 2.4 become generally available?",
+      "relevant": [
+        "orchid-release"
+      ]
+    },
+    {
+      "id": "free_limit",
+      "query": "What is the current Orchid free tier monthly search limit?",
+      "relevant": [
+        "orchid-release"
+      ]
+    },
+    {
+      "id": "rate_limit",
+      "query": "How should an agent handle Cobalt API throttling?",
+      "relevant": [
+        "cobalt-api"
+      ]
+    },
+    {
+      "id": "cache_backend",
+      "query": "Which Django cache class stores values in local process memory?",
+      "relevant": [
+        "cache-guide"
+      ]
+    },
+    {
+      "id": "dynamic",
+      "query": "A documentation answer appears only after JavaScript runs. What fetch method is needed?",
+      "relevant": [
+        "dynamic-pages"
+      ]
+    },
+    {
+      "id": "injection",
+      "query": "How should tools treat instructions embedded in an untrusted web page?",
+      "relevant": [
+        "security"
+      ]
+    },
+    {
+      "id": "grep_ast",
+      "query": "Does syntax tree search solve the same problem as regular expression code search?",
+      "relevant": [
+        "python-search"
+      ]
+    },
+    {
+      "id": "index_break_even",
+      "query": "When does building a code search index pay off?",
+      "relevant": [
+        "indexing"
+      ]
+    },
+    {
+      "id": "no_answer",
+      "query": "What is the launch date of Violet Database 9?",
+      "relevant": []
+    }
+  ],
+  "embedding_available": true,
+  "embedding_error": null
+}
