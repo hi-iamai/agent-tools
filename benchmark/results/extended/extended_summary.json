@@ -10991,11 +10991,11 @@
   ],
   "zoekt": [
     {
-      "runs": 30,
+      "runs": 40,
       "success_rate": 1,
-      "median_query_ms": 9.793200006242841,
-      "p95_query_ms": 34.867449993907904,
-      "median_raw_bytes": 22244.0
+      "median_query_ms": 20.49145000637509,
+      "p95_query_ms": 35.30854498094413,
+      "median_raw_bytes": 40246.0
     }
   ],
   "searxng": [
@@ -11024,12 +11024,18 @@
     "database_create": {
       "elapsed": "1:37.74",
       "max_rss_kb": 1907092,
-      "database_bytes": 182935220
+      "database_bytes": 655888555
     },
     "function_query": {
       "elapsed": "0:32.52",
       "max_rss_kb": 2957936,
       "result_rows": 35718
+    },
+    "security_and_quality_suite": {
+      "elapsed": "4:30.36",
+      "max_rss_kb": 3903884,
+      "sarif_bytes": 3419136,
+      "findings": 1336
     }
   }
 }

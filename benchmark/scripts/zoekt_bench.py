@@ -15,6 +15,7 @@ QUERIES = [
     ("RemovedInDjango71Warning", 20),
     ("get_user_model", 53),
     ("QuantumCacheTeleport", 0),
+    ("get_user_model|RemovedInDjango71Warning", 73),
 ]
 
 

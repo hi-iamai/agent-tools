@@ -133,6 +133,8 @@ ast-grep 原始 JSON 仍较大，必须裁剪字段和分页。
 
 Zoekt 对三类 literal query 的 Web 查询中位约 2.6～22.2ms，命中数与 oracle 一致。
 CodeQL 自定义全函数查询首次编译/执行约 32.5s、峰值约 2.96GB，返回 35,718 行。
+官方 Python security-and-quality suite 运行约 4m30s、峰值约 3.9GB，产出 1,336 条 SARIF
+结果；分析后的数据库目录增长到约 656MB。
 三者服务的层级不同：Zoekt 是高性能代码搜索，SCIP 是语言无关代码导航索引，CodeQL 是
 重型程序分析数据库，不能仅按查询延迟排名。
 
@@ -338,7 +340,7 @@ Windows 资源采样：
 | LSP references/workspace symbols | 已完成 definition；references/workspace symbols 尚未完成 |
 | SCIP | 已完成 Python 索引构建；消费/导航查询尚未实现 |
 | Zoekt | 已完成索引和 literal 查询；symbol/regex 高级查询待扩展 |
-| CodeQL | 已完成 Python database 和自定义函数查询；安全 query suite 未跑 |
+| CodeQL | 已完成 Python database、自定义函数查询和 security-and-quality suite |
 | SWE-bench | Docker 已安装但 WSL1 无法启动 OCI 容器 |
 | 原生 Linux | 当前仅 WSL1 |
 | MCP Streamable HTTP | 已完成；快速 Backend 下的纯协议消融待补 |
