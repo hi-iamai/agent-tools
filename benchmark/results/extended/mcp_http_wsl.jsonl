@@ -1,0 +1,9 @@
+{"runtime": "mcp_streamable_http", "query": "RemovedInDjango71Warning", "repeat": 0, "duration_ms": 7293.136000022059, "is_error": false}
+{"runtime": "mcp_streamable_http", "query": "get_user_model", "repeat": 0, "duration_ms": 2691.012299997965, "is_error": false}
+{"runtime": "mcp_streamable_http", "query": "QuantumCacheTeleport", "repeat": 0, "duration_ms": 2618.479600001592, "is_error": false}
+{"runtime": "mcp_streamable_http", "query": "RemovedInDjango71Warning", "repeat": 1, "duration_ms": 2540.4639999906067, "is_error": false}
+{"runtime": "mcp_streamable_http", "query": "get_user_model", "repeat": 1, "duration_ms": 2517.495600011898, "is_error": false}
+{"runtime": "mcp_streamable_http", "query": "QuantumCacheTeleport", "repeat": 1, "duration_ms": 2514.430800016271, "is_error": false}
+{"runtime": "mcp_streamable_http", "query": "RemovedInDjango71Warning", "repeat": 2, "duration_ms": 2603.407300019171, "is_error": false}
+{"runtime": "mcp_streamable_http", "query": "get_user_model", "repeat": 2, "duration_ms": 2527.842400013469, "is_error": false}
+{"runtime": "mcp_streamable_http", "query": "QuantumCacheTeleport", "repeat": 2, "duration_ms": 2555.4387000156567, "is_error": false}

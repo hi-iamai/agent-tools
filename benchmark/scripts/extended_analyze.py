@@ -192,10 +192,12 @@ def main() -> None:
     multirepo_rows = []
     patch_rows = []
     mcp_rows = []
+    mcp_http_rows = []
     resource_rows = []
     security_rows = []
     lsp_rows = []
     zoekt_rows = []
+    searx_rows = []
     for path in base.glob("extended_search_*.jsonl"):
         search_rows.extend(read_jsonl(path))
     for path in base.glob("webfetch_*.jsonl"):
@@ -222,6 +224,8 @@ def main() -> None:
         patch_rows.extend(read_jsonl(path))
     for path in base.glob("mcp_runtime_*.jsonl"):
         mcp_rows.extend(read_jsonl(path))
+    for path in base.glob("mcp_http_*.jsonl"):
+        mcp_http_rows.extend(read_jsonl(path))
     for path in base.glob("resource_*.jsonl"):
         resource_rows.extend(read_jsonl(path))
     for path in base.glob("security_boundaries*.jsonl"):
@@ -230,6 +234,8 @@ def main() -> None:
         lsp_rows.extend(read_jsonl(path))
     for path in base.glob("zoekt_*.jsonl"):
         zoekt_rows.extend(read_jsonl(path))
+    for path in base.glob("searxng_*.jsonl"):
+        searx_rows.extend(read_jsonl(path))
     summary = {
         "search": summarize_search(search_rows),
         "webfetch": summarize_web(web_rows),
@@ -296,6 +302,13 @@ def main() -> None:
                 "error_rate": statistics.mean(bool(x["is_error"]) for x in mcp_rows) if mcp_rows else 0,
             }
         ] if mcp_rows else [],
+        "mcp_http": [{
+            "runtime": "mcp_streamable_http",
+            "runs": len(mcp_http_rows),
+            "median_ms": statistics.median(x["duration_ms"] for x in mcp_http_rows),
+            "p95_ms": percentile([x["duration_ms"] for x in mcp_http_rows], 0.95),
+            "error_rate": statistics.mean(bool(x["is_error"]) for x in mcp_http_rows),
+        }] if mcp_http_rows else [],
         "resources": [
             {
                 "backend": backend,
@@ -332,6 +345,14 @@ def main() -> None:
             "p95_query_ms": percentile([x["duration_ms"] for x in zoekt_rows], 0.95),
             "median_raw_bytes": statistics.median(x["raw_bytes"] for x in zoekt_rows),
         }] if zoekt_rows else [],
+        "searxng": [{
+            "runs": len(searx_rows),
+            "official_at_5": statistics.mean(bool(x["official_at_5"]) for x in searx_rows),
+            "official_at_10": statistics.mean(bool(x["official_at_10"]) for x in searx_rows),
+            "median_ms": statistics.median(x["duration_ms"] for x in searx_rows),
+            "p95_ms": percentile([x["duration_ms"] for x in searx_rows], 0.95),
+            "mean_unresponsive_engines": statistics.mean(len(x["unresponsive_engines"]) for x in searx_rows),
+        }] if searx_rows else [],
         "indexers": (
             json.loads((base / "indexer_meta.json").read_text(encoding="utf-8"))
             if (base / "indexer_meta.json").exists() else {}
@@ -355,10 +376,12 @@ def main() -> None:
     write_csv(base / "multirepo_search_summary.csv", summary["multirepo_search"])
     write_csv(base / "patch_tools_summary.csv", summary["patch_tools"])
     write_csv(base / "mcp_runtime_summary.csv", summary["mcp_runtime"])
+    write_csv(base / "mcp_http_summary.csv", summary["mcp_http"])
     write_csv(base / "resource_summary.csv", summary["resources"])
     write_csv(base / "security_summary.csv", summary["security"])
     write_csv(base / "lsp_summary.csv", summary["lsp"])
     write_csv(base / "zoekt_summary.csv", summary["zoekt"])
+    write_csv(base / "searxng_summary.csv", summary["searxng"])
     print(json.dumps({key: len(value) for key, value in summary.items()}, indent=2))
 
 

@@ -153,6 +153,19 @@ CodeQL 自定义全函数查询首次编译/执行约 32.5s、峰值约 2.96GB�
 当前配置的 Claude/Bedrock 网关已实测原生 Web Search，HTTP 400 明确表示不支持
 `web_search_options`。Tavily、Exa、Brave、Bing 等因无凭证未运行。
 
+### SearXNG 公网聚合
+
+在 WSL1 中以源码方式部署 SearXNG，对 5 个“寻找官方站点”查询重复 3 次：
+
+```text
+官方域名 Recall@5：100%
+官方域名 Recall@10：100%
+中位时延：273ms
+```
+
+部分引擎出现 CAPTCHA、429 或 suspended，结果主要由仍可用的 Google CSE、Wikipedia
+等引擎贡献。聚合搜索的长期可用性仍依赖上游状态。
+
 ## 7. WebFetch 与 Browser
 
 动态页面答案通过运行时 API 加载，原始 HTML 不包含答案。
@@ -250,6 +263,18 @@ Tool Call：2906ms
 
 MCP 内部使用更慢的 WSL Python scanner，不能把 2.9s 全部归因于协议。
 
+同一 Tool 通过 MCP Streamable HTTP 时：
+
+```text
+初始化：329ms
+list_tools：8.2ms
+Tool Call 中位：2555ms
+错误率：0%
+```
+
+相同慢速 Engine 下 HTTP 与 STDIO 差异小于扫描成本；若要精确比较协议，需要换成内存或
+Zoekt 等快速 Backend。
+
 Windows 资源采样：
 
 | Backend | Wall | CPU | Peak RSS |
@@ -309,20 +334,20 @@ Windows 资源采样：
 |---|---|
 | Tavily/Exa/Brave/Bing/SERP API | 无凭证 |
 | 当前模型原生 Web Search | Provider 明确不支持 |
-| SearXNG | 未部署；需要外部搜索源配置 |
+| SearXNG | 已完成公网聚合 smoke；上游 CAPTCHA/429 稳定性待长期观测 |
 | LSP references/workspace symbols | 已完成 definition；references/workspace symbols 尚未完成 |
 | SCIP | 已完成 Python 索引构建；消费/导航查询尚未实现 |
 | Zoekt | 已完成索引和 literal 查询；symbol/regex 高级查询待扩展 |
 | CodeQL | 已完成 Python database 和自定义函数查询；安全 query suite 未跑 |
 | SWE-bench | Docker 已安装但 WSL1 无法启动 OCI 容器 |
 | 原生 Linux | 当前仅 WSL1 |
-| MCP Streamable HTTP | 仅完成 STDIO |
+| MCP Streamable HTTP | 已完成；快速 Backend 下的纯协议消融待补 |
 | Prompt Injection 红队 | 仅完成命令/路径边界 smoke |
 
 Docker daemon 在 WSL1 中可通过关闭 bridge/iptables 后启动并响应 `docker info`，但
 `runc` 启动最小 `hello-world` 容器时因 WSL1 内核 socket/OCI 限制失败。转换 WSL2 又因
-宿主 Virtual Machine Platform/固件虚拟化不可用而失败。因此依赖容器的 SearXNG 和
-SWE-bench 仍无法在当前机器运行。
+宿主 Virtual Machine Platform/固件虚拟化不可用而失败。SearXNG 后续改为源码部署成功；
+SWE-bench 等强依赖容器的任务仍无法在当前机器运行。
 
 ## 16. 数据使用建议
 

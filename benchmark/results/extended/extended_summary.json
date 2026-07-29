@@ -10924,6 +10924,15 @@
       "error_rate": 0
     }
   ],
+  "mcp_http": [
+    {
+      "runtime": "mcp_streamable_http",
+      "runs": 9,
+      "median_ms": 2555.4387000156567,
+      "p95_ms": 5452.28652001242,
+      "error_rate": 0
+    }
+  ],
   "resources": [
     {
       "backend": "ast_grep",
@@ -10987,6 +10996,16 @@
       "median_query_ms": 9.793200006242841,
       "p95_query_ms": 34.867449993907904,
       "median_raw_bytes": 22244.0
+    }
+  ],
+  "searxng": [
+    {
+      "runs": 15,
+      "official_at_5": 1,
+      "official_at_10": 1,
+      "median_ms": 273.4725000045728,
+      "p95_ms": 1354.4733499817082,
+      "mean_unresponsive_engines": 3
     }
   ],
   "indexers": {

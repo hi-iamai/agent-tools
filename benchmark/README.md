@@ -67,6 +67,11 @@ python benchmark/scripts/multirepo_search_bench.py --repeats 3 --output-dir benc
 python benchmark/scripts/patch_tool_bench.py --repeats 20 --output-dir benchmark/results/extended
 # MCP 2.0 SDK is currently exercised in WSL:
 python benchmark/scripts/mcp_runtime_bench.py --repo /path/to/repo --repeats 3 --output benchmark/results/extended/mcp_runtime_wsl.jsonl
+python benchmark/scripts/mcp_http_bench.py --url http://127.0.0.1:8767/mcp --repeats 3 --output benchmark/results/extended/mcp_http_wsl.jsonl
+
+# SearXNG and Zoekt are deployed from source in WSL:
+python benchmark/scripts/searxng_bench.py --base-url http://127.0.0.1:8888 --repeats 3 --output benchmark/results/extended/searxng_wsl.jsonl
+python benchmark/scripts/zoekt_bench.py --base-url http://127.0.0.1:6070 --repeats 10 --output benchmark/results/extended/zoekt_wsl.jsonl
 python benchmark/scripts/generate_manifest.py
 python benchmark/scripts/extended_analyze.py
 ```

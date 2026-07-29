@@ -5,12 +5,13 @@
     "structure": ["regex", "ast_grep", "python_ast"],
     "code_intelligence": ["jedi", "tree_sitter", "ctags_wsl", "python_lsp_definition", "scip_python_index", "codeql_python_database"],
     "local_websearch": ["token_overlap", "bm25", "fts5", "embedding", "hybrid_rrf"],
+    "public_websearch": ["searxng_source_deployment"],
     "webfetch": ["requests", "httpx", "aiohttp", "curl", "wget", "bs4", "lxml", "readability", "trafilatura", "selectolax"],
     "browser": ["playwright_edge"],
     "api_fetch": ["pagination", "gzip", "redirect", "429", "500", "sync", "persistent", "native_async"],
     "git_tools": ["status", "diff", "log", "show", "blame", "changed_files", "history_search"],
     "io_patch": ["read", "range_read", "batch_read", "exact_replace", "git_apply", "conflict_check"],
-    "runtime": ["per_call_process", "persistent_stdio", "local_http", "mcp_stdio"],
+    "runtime": ["per_call_process", "persistent_stdio", "local_http", "mcp_stdio", "mcp_streamable_http"],
     "indexed_code_search": ["sqlite_fts5", "zoekt"],
     "security_smoke": ["workspace_boundary", "network_deny", "delete_deny", "secret_non_disclosure"],
     "agent_surface": ["shell", "dedicated", "minimal_router"]
@@ -18,7 +19,7 @@
   "not_run": {
     "public_websearch_providers": "No Tavily, Exa, Brave, Bing, or SERP credentials",
     "native_model_websearch": "Current Bedrock-backed gateway returned HTTP 400 unsupported parameter",
-    "searxng": "No external search engines configured",
+    "searxng_long_run": "Public aggregation smoke completed; long-run CAPTCHA and rate-limit monitoring remains",
     "lsp_references_workspace_symbols": "Only definition request is covered",
     "scip_queries": "Python SCIP index built; no stable local consumer/query CLI",
     "zoekt_advanced_queries": "Literal query covered; symbol/regex/ranking suite remains",
@@ -26,7 +27,7 @@
     "docker_containers": "Docker daemon starts on WSL1 with bridge and iptables disabled, but runc cannot start containers; WSL2 conversion fails because host virtualization platform is unavailable",
     "swe_bench": "Blocked by WSL1 container runtime limitation",
     "native_linux": "Only WSL1 is available",
-    "mcp_streamable_http": "Only MCP STDIO completed",
+    "mcp_protocol_isolation": "STDIO and Streamable HTTP completed with a slow Python scanner; fast-backend protocol-only comparison remains",
     "full_prompt_injection_red_team": "Only path/command boundary smoke tests completed"
   }
 }
