@@ -361,6 +361,10 @@ def main() -> None:
             json.loads((base / "codeql_meta.json").read_text(encoding="utf-8"))
             if (base / "codeql_meta.json").exists() else {}
         ),
+        "scip_stats": (
+            json.loads((base / "scip_stats.json").read_text(encoding="utf-8"))
+            if (base / "scip_stats.json").exists() else {}
+        ),
     }
     json_dump(base / "extended_summary.json", summary)
     write_csv(base / "search_summary.csv", summary["search"])

@@ -138,6 +138,17 @@ CodeQL 自定义全函数查询首次编译/执行约 32.5s、峰值约 2.96GB�
 三者服务的层级不同：Zoekt 是高性能代码搜索，SCIP 是语言无关代码导航索引，CodeQL 是
 重型程序分析数据库，不能仅按查询延迟排名。
 
+SCIP 索引统计：
+
+```text
+documents：2,925
+occurrences：770,420
+definitions：166,557
+```
+
+SCIP CLI 可完成 lint/stats/snapshot，但当前版本没有通用 definition/reference 查询 CLI；
+后续需要接入 SCIP 消费者或自建 SQLite/graph reader。
+
 ## 6. 本地 WebSearch / 语义检索
 
 固定 8 文档、8 有答案和 1 无答案查询：

@@ -21,7 +21,7 @@
     "native_model_websearch": "Current Bedrock-backed gateway returned HTTP 400 unsupported parameter",
     "searxng_long_run": "Public aggregation smoke completed; long-run CAPTCHA and rate-limit monitoring remains",
     "lsp_references_workspace_symbols": "Only definition request is covered",
-    "scip_queries": "Python SCIP index built; no stable local consumer/query CLI",
+    "scip_queries": "Python SCIP index and stats completed; current SCIP CLI has no general definition/reference query command, so a consumer remains",
     "zoekt_advanced_queries": "Literal query covered; symbol/regex/ranking suite remains",
     "docker_containers": "Docker daemon starts on WSL1 with bridge and iptables disabled, but runc cannot start containers; WSL2 conversion fails because host virtualization platform is unavailable",
     "swe_bench": "Blocked by WSL1 container runtime limitation",

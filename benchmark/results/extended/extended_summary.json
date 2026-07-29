@@ -11037,5 +11037,53 @@
       "sarif_bytes": 3419136,
       "findings": 1336
     }
+  },
+  "scip_stats": {
+    "documents": 2925,
+    "documentSizes": {
+      "Percentiles": {
+        "50": 5801,
+        "90": 69466,
+        "95": 120615,
+        "99": 346945,
+        "99.9": 852309
+      },
+      "mean": 28390,
+      "stddev": 73174,
+      "max": 1562492,
+      "sum": 83043234,
+      "comment": "sizes are in bytes"
+    },
+    "linesOfCode": 0,
+    "occurrences": 770420,
+    "occurrenceCounts": {
+      "Percentiles": {
+        "50": 48,
+        "90": 631,
+        "95": 1083,
+        "99": 3473,
+        "99.9": 9684
+      },
+      "mean": 263,
+      "stddev": 726,
+      "max": 15612,
+      "sum": 770420,
+      "comment": ""
+    },
+    "definitions": 166557,
+    "definitionCounts": {
+      "Percentiles": {
+        "50": 14,
+        "90": 145,
+        "95": 234,
+        "99": 657,
+        "99.9": 1453
+      },
+      "mean": 56,
+      "stddev": 136,
+      "max": 2448,
+      "sum": 166557,
+      "comment": "counted using occurrences"
+    }
   }
 }
