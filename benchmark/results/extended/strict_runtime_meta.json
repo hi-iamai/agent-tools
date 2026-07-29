@@ -1,0 +1,24 @@
+{
+  "schema": "strict-runtime-v1",
+  "payload_limits": {
+    "1k": 1,
+    "10k": 10,
+    "100k": 100,
+    "1m": 1000
+  },
+  "concurrencies": [
+    1,
+    4,
+    8,
+    16
+  ],
+  "repeats": 20,
+  "throughput_requests": 64,
+  "persistent_stdio_init_ms": 117.68210001173429,
+  "async_loop_init_ms": 1.1916999937966466,
+  "persistent_http_init_ms": 135.9418999927584,
+  "process_pool_init_ms": 61.90140001126565,
+  "mcp_stdio_init_ms": 786.0136000090279,
+  "mcp_http_init_ms": 30.983699980424717,
+  "driver_peak_rss_bytes": 95252480
+}

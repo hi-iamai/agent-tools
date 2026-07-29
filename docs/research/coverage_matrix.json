@@ -12,6 +12,7 @@
     "git_tools": ["status", "diff", "log", "show", "blame", "changed_files", "history_search"],
     "io_patch": ["read", "range_read", "batch_read", "exact_replace", "git_apply", "conflict_check"],
     "runtime": ["per_call_process", "persistent_stdio", "local_http", "mcp_stdio", "mcp_streamable_http"],
+    "strict_runtime_ablation": ["direct_sync", "direct_async", "persistent_event_loop", "asyncio_to_thread", "process_pool", "per_call_process", "persistent_stdio", "persistent_http", "mcp_stdio", "mcp_streamable_http"],
     "indexed_code_search": ["sqlite_fts5", "zoekt"],
     "security_smoke": ["workspace_boundary", "network_deny", "delete_deny", "secret_non_disclosure"],
     "agent_surface": ["shell", "dedicated", "minimal_router"]

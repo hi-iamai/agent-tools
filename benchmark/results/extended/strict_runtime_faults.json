@@ -1,0 +1,33 @@
+[
+  {
+    "case": "http_timeout",
+    "success": true,
+    "duration_ms": 101.00470000179484
+  },
+  {
+    "case": "cooperative_thread_cancel",
+    "success": true,
+    "duration_ms": 103.727700014133
+  },
+  {
+    "case": "process_future_cancel_after_start",
+    "success": true,
+    "duration_ms": 1025.8816999848932,
+    "note": "running ProcessPool task cannot be cancelled cooperatively"
+  },
+  {
+    "case": "http_after_timeout",
+    "success": true,
+    "duration_ms": 2.231699996627867
+  },
+  {
+    "case": "http_crash_restart",
+    "success": true,
+    "duration_ms": 159.24880001693964
+  },
+  {
+    "case": "stdio_restart",
+    "success": true,
+    "duration_ms": 103.37920000893064
+  }
+]

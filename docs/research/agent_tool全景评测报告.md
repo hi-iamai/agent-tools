@@ -288,6 +288,41 @@ Tool Call 中位：2555ms
 相同慢速 Engine 下 HTTP 与 STDIO 差异小于扫描成本；若要精确比较协议，需要换成内存或
 Zoekt 等快速 Backend。
 
+### 严格同 Engine 实验
+
+后续已使用同一个预加载内存 Engine、相同 Schema、相同 payload，严格比较同步、异步、
+线程、进程、STDIO、HTTP 和 MCP。完整结果见
+[`严格运行形态实验.md`](严格运行形态实验.md)。
+
+约 1KB 响应的中位时延：
+
+```text
+Direct sync Engine-only       259µs
+Direct sync + JSON            367µs
+Persistent STDIO              435µs
+Persistent async loop         459µs
+MCP STDIO                    1.15ms
+Persistent HTTP              1.93ms
+MCP HTTP                     2.34ms
+ProcessPool                  6.11ms
+Per-call process              124ms
+```
+
+约 1MB 响应时：
+
+```text
+Direct sync + JSON            2.19ms
+Persistent STDIO              5.28ms
+Persistent HTTP               5.77ms
+ProcessPool                   6.23ms
+MCP STDIO                    17.06ms
+MCP HTTP                     46.40ms
+Per-call process              120ms
+```
+
+这组实验隔离证明：短任务应优先同进程或持久通道；每次启动子进程固定成本最大；MCP 在
+小结果时为毫秒级开销，在大结果时 Tool Result 包装和序列化成本显著。
+
 Windows 资源采样：
 
 | Backend | Wall | CPU | Peak RSS |

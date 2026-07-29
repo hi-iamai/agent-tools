@@ -1,0 +1,691 @@
+{
+  "payload": [
+    {
+      "adapter": "direct_async",
+      "payload": "100k",
+      "runs": 20,
+      "median_us": 737.1,
+      "p95_us": 835.1600000000002,
+      "median_response_bytes": 91698.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "direct_async",
+      "payload": "10k",
+      "runs": 20,
+      "median_us": 570.8,
+      "p95_us": 854.7350000000001,
+      "median_response_bytes": 9257.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "direct_async",
+      "payload": "1k",
+      "runs": 20,
+      "median_us": 586.65,
+      "p95_us": 811.1250000000001,
+      "median_response_bytes": 1021.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "direct_async",
+      "payload": "1m",
+      "runs": 20,
+      "median_us": 2454.5,
+      "p95_us": 3955.1600000000003,
+      "median_response_bytes": 916999.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "direct_async_persistent_loop",
+      "payload": "100k",
+      "runs": 20,
+      "median_us": 618.2,
+      "p95_us": 726.9100000000002,
+      "median_response_bytes": 91698.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "direct_async_persistent_loop",
+      "payload": "10k",
+      "runs": 20,
+      "median_us": 464.85,
+      "p95_us": 655.515,
+      "median_response_bytes": 9257.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "direct_async_persistent_loop",
+      "payload": "1k",
+      "runs": 20,
+      "median_us": 458.54999999999995,
+      "p95_us": 625.5100000000001,
+      "median_response_bytes": 1021.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "direct_async_persistent_loop",
+      "payload": "1m",
+      "runs": 20,
+      "median_us": 3016.45,
+      "p95_us": 4342.930000000001,
+      "median_response_bytes": 916999.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "direct_sync",
+      "payload": "100k",
+      "runs": 20,
+      "median_us": 498.85,
+      "p95_us": 603.3300000000002,
+      "median_response_bytes": 91698.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "direct_sync",
+      "payload": "10k",
+      "runs": 20,
+      "median_us": 338.95,
+      "p95_us": 533.9400000000002,
+      "median_response_bytes": 9257.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "direct_sync",
+      "payload": "1k",
+      "runs": 20,
+      "median_us": 367.3,
+      "p95_us": 598.6450000000016,
+      "median_response_bytes": 1021.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "direct_sync",
+      "payload": "1m",
+      "runs": 20,
+      "median_us": 2186.15,
+      "p95_us": 3730.775,
+      "median_response_bytes": 916999.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "direct_sync_engine_only",
+      "payload": "100k",
+      "runs": 20,
+      "median_us": 266.4,
+      "p95_us": 290.92500000000007,
+      "median_response_bytes": 91698.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "direct_sync_engine_only",
+      "payload": "10k",
+      "runs": 20,
+      "median_us": 261.9,
+      "p95_us": 310.30000000000007,
+      "median_response_bytes": 9257.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "direct_sync_engine_only",
+      "payload": "1k",
+      "runs": 20,
+      "median_us": 259.25,
+      "p95_us": 405.37,
+      "median_response_bytes": 1021.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "direct_sync_engine_only",
+      "payload": "1m",
+      "runs": 20,
+      "median_us": 297.5,
+      "p95_us": 322.5150000000001,
+      "median_response_bytes": 916999.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "direct_to_thread",
+      "payload": "100k",
+      "runs": 20,
+      "median_us": 1319.0,
+      "p95_us": 1604.0950000000003,
+      "median_response_bytes": 91698.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "direct_to_thread",
+      "payload": "10k",
+      "runs": 20,
+      "median_us": 1202.45,
+      "p95_us": 1486.7700000000002,
+      "median_response_bytes": 9257.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "direct_to_thread",
+      "payload": "1k",
+      "runs": 20,
+      "median_us": 1278.9,
+      "p95_us": 1584.4250000000006,
+      "median_response_bytes": 1021.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "direct_to_thread",
+      "payload": "1m",
+      "runs": 20,
+      "median_us": 3870.65,
+      "p95_us": 4451.365000000001,
+      "median_response_bytes": 916999.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "mcp_http",
+      "payload": "100k",
+      "runs": 20,
+      "median_us": 9555.65,
+      "p95_us": 31623.385000000002,
+      "median_response_bytes": 187194.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "mcp_http",
+      "payload": "10k",
+      "runs": 20,
+      "median_us": 2339.9,
+      "p95_us": 3016.2650000000003,
+      "median_response_bytes": 19072.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "mcp_http",
+      "payload": "1k",
+      "runs": 20,
+      "median_us": 2339.55,
+      "p95_us": 2893.3050000000044,
+      "median_response_bytes": 2276.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "mcp_http",
+      "payload": "1m",
+      "runs": 20,
+      "median_us": 46397.7,
+      "p95_us": 152585.455,
+      "median_response_bytes": 1870196.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "mcp_stdio",
+      "payload": "100k",
+      "runs": 20,
+      "median_us": 1762.4,
+      "p95_us": 2172.670000000001,
+      "median_response_bytes": 187194.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "mcp_stdio",
+      "payload": "10k",
+      "runs": 20,
+      "median_us": 1139.85,
+      "p95_us": 1275.035,
+      "median_response_bytes": 19072.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "mcp_stdio",
+      "payload": "1k",
+      "runs": 20,
+      "median_us": 1152.4,
+      "p95_us": 4185.670000000031,
+      "median_response_bytes": 2276.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "mcp_stdio",
+      "payload": "1m",
+      "runs": 20,
+      "median_us": 17063.699999999997,
+      "p95_us": 47467.710000000014,
+      "median_response_bytes": 1870196.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "per_call_process",
+      "payload": "100k",
+      "runs": 20,
+      "median_us": 115353.54999999999,
+      "p95_us": 126177.87500000001,
+      "median_response_bytes": 91698.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "per_call_process",
+      "payload": "10k",
+      "runs": 20,
+      "median_us": 124948.0,
+      "p95_us": 148285.88,
+      "median_response_bytes": 9257.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "per_call_process",
+      "payload": "1k",
+      "runs": 20,
+      "median_us": 124233.1,
+      "p95_us": 145328.69500000004,
+      "median_response_bytes": 1021.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "per_call_process",
+      "payload": "1m",
+      "runs": 20,
+      "median_us": 120417.70000000001,
+      "p95_us": 138132.7,
+      "median_response_bytes": 916999.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "persistent_http",
+      "payload": "100k",
+      "runs": 20,
+      "median_us": 1948.8,
+      "p95_us": 2306.7000000000003,
+      "median_response_bytes": 91698.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "persistent_http",
+      "payload": "10k",
+      "runs": 20,
+      "median_us": 2000.4,
+      "p95_us": 2495.855,
+      "median_response_bytes": 9257.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "persistent_http",
+      "payload": "1k",
+      "runs": 20,
+      "median_us": 1926.85,
+      "p95_us": 3017.7900000000072,
+      "median_response_bytes": 1021.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "persistent_http",
+      "payload": "1m",
+      "runs": 20,
+      "median_us": 5765.0,
+      "p95_us": 190660.95500000002,
+      "median_response_bytes": 916999.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "persistent_stdio",
+      "payload": "100k",
+      "runs": 20,
+      "median_us": 716.9,
+      "p95_us": 1172.6000000000001,
+      "median_response_bytes": 91718.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "persistent_stdio",
+      "payload": "10k",
+      "runs": 20,
+      "median_us": 488.55,
+      "p95_us": 736.875,
+      "median_response_bytes": 9277.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "persistent_stdio",
+      "payload": "1k",
+      "runs": 20,
+      "median_us": 435.0,
+      "p95_us": 625.1099999999999,
+      "median_response_bytes": 1041.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "persistent_stdio",
+      "payload": "1m",
+      "runs": 20,
+      "median_us": 5277.55,
+      "p95_us": 5999.89,
+      "median_response_bytes": 917019.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "process_pool",
+      "payload": "100k",
+      "runs": 20,
+      "median_us": 1225.9,
+      "p95_us": 1427.9800000000005,
+      "median_response_bytes": 91698.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "process_pool",
+      "payload": "10k",
+      "runs": 20,
+      "median_us": 849.4,
+      "p95_us": 1071.39,
+      "median_response_bytes": 9257.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "process_pool",
+      "payload": "1k",
+      "runs": 20,
+      "median_us": 6112.3,
+      "p95_us": 7599.415000000001,
+      "median_response_bytes": 1021.0,
+      "success_rate": 1
+    },
+    {
+      "adapter": "process_pool",
+      "payload": "1m",
+      "runs": 20,
+      "median_us": 6225.549999999999,
+      "p95_us": 6870.47,
+      "median_response_bytes": 916999.0,
+      "success_rate": 1
+    }
+  ],
+  "throughput": [
+    {
+      "adapter": "direct_async_persistent_loop",
+      "concurrency": 1,
+      "runs": 1,
+      "median_rps": 2791.4929239474745,
+      "median_duration_ms": 22.926800011191517,
+      "success_rate": 1
+    },
+    {
+      "adapter": "direct_async_persistent_loop",
+      "concurrency": 4,
+      "runs": 1,
+      "median_rps": 2739.8902319280096,
+      "median_duration_ms": 23.358600010396913,
+      "success_rate": 1
+    },
+    {
+      "adapter": "direct_async_persistent_loop",
+      "concurrency": 8,
+      "runs": 1,
+      "median_rps": 2682.6170578797737,
+      "median_duration_ms": 23.857300024246797,
+      "success_rate": 1
+    },
+    {
+      "adapter": "direct_async_persistent_loop",
+      "concurrency": 16,
+      "runs": 1,
+      "median_rps": 2453.761923775423,
+      "median_duration_ms": 26.08239999972284,
+      "success_rate": 1
+    },
+    {
+      "adapter": "direct_sync_threads",
+      "concurrency": 1,
+      "runs": 1,
+      "median_rps": 3155.92747413795,
+      "median_duration_ms": 20.279299991670996,
+      "success_rate": 1
+    },
+    {
+      "adapter": "direct_sync_threads",
+      "concurrency": 4,
+      "runs": 1,
+      "median_rps": 3222.736406644525,
+      "median_duration_ms": 19.858899991959333,
+      "success_rate": 1
+    },
+    {
+      "adapter": "direct_sync_threads",
+      "concurrency": 8,
+      "runs": 1,
+      "median_rps": 3215.8380027755443,
+      "median_duration_ms": 19.901499996194616,
+      "success_rate": 1
+    },
+    {
+      "adapter": "direct_sync_threads",
+      "concurrency": 16,
+      "runs": 1,
+      "median_rps": 2912.639033419475,
+      "median_duration_ms": 21.973199996864423,
+      "success_rate": 1
+    },
+    {
+      "adapter": "mcp_http",
+      "concurrency": 1,
+      "runs": 1,
+      "median_rps": 415.65000191821673,
+      "median_duration_ms": 153.97569999913685,
+      "success_rate": 1
+    },
+    {
+      "adapter": "mcp_http",
+      "concurrency": 4,
+      "runs": 1,
+      "median_rps": 557.5213992772866,
+      "median_duration_ms": 114.79379999218509,
+      "success_rate": 1
+    },
+    {
+      "adapter": "mcp_http",
+      "concurrency": 8,
+      "runs": 1,
+      "median_rps": 573.4273754763046,
+      "median_duration_ms": 111.60959998960607,
+      "success_rate": 1
+    },
+    {
+      "adapter": "mcp_http",
+      "concurrency": 16,
+      "runs": 1,
+      "median_rps": 537.4799915172817,
+      "median_duration_ms": 119.0741999889724,
+      "success_rate": 1
+    },
+    {
+      "adapter": "mcp_stdio",
+      "concurrency": 1,
+      "runs": 1,
+      "median_rps": 878.0522605764215,
+      "median_duration_ms": 72.88859999971464,
+      "success_rate": 1
+    },
+    {
+      "adapter": "per_call_process",
+      "concurrency": 1,
+      "runs": 1,
+      "median_rps": 8.491674762050708,
+      "median_duration_ms": 7536.793600011151,
+      "success_rate": 1
+    },
+    {
+      "adapter": "per_call_process",
+      "concurrency": 4,
+      "runs": 1,
+      "median_rps": 22.995036701069257,
+      "median_duration_ms": 2783.209299988812,
+      "success_rate": 1
+    },
+    {
+      "adapter": "per_call_process",
+      "concurrency": 8,
+      "runs": 1,
+      "median_rps": 31.324766466780176,
+      "median_duration_ms": 2043.1117999833077,
+      "success_rate": 1
+    },
+    {
+      "adapter": "per_call_process",
+      "concurrency": 16,
+      "runs": 1,
+      "median_rps": 33.95388298692915,
+      "median_duration_ms": 1884.909600019455,
+      "success_rate": 1
+    },
+    {
+      "adapter": "persistent_http",
+      "concurrency": 1,
+      "runs": 1,
+      "median_rps": 806.3855657527455,
+      "median_duration_ms": 79.36649999464862,
+      "success_rate": 1
+    },
+    {
+      "adapter": "persistent_http",
+      "concurrency": 4,
+      "runs": 1,
+      "median_rps": 161.84482874294196,
+      "median_duration_ms": 395.44049999676645,
+      "success_rate": 1
+    },
+    {
+      "adapter": "persistent_http",
+      "concurrency": 8,
+      "runs": 1,
+      "median_rps": 166.72289221517642,
+      "median_duration_ms": 383.8705000234768,
+      "success_rate": 1
+    },
+    {
+      "adapter": "persistent_http",
+      "concurrency": 16,
+      "runs": 1,
+      "median_rps": 230.78074207660976,
+      "median_duration_ms": 277.3194999899715,
+      "success_rate": 1
+    },
+    {
+      "adapter": "persistent_stdio",
+      "concurrency": 1,
+      "runs": 1,
+      "median_rps": 1434.8199421783074,
+      "median_duration_ms": 44.60489997291006,
+      "success_rate": 1
+    },
+    {
+      "adapter": "persistent_stdio",
+      "concurrency": 4,
+      "runs": 1,
+      "median_rps": 1697.9370056945231,
+      "median_duration_ms": 37.692800018703565,
+      "success_rate": 1
+    },
+    {
+      "adapter": "persistent_stdio",
+      "concurrency": 8,
+      "runs": 1,
+      "median_rps": 1628.2377127876862,
+      "median_duration_ms": 39.306299993768334,
+      "success_rate": 1
+    },
+    {
+      "adapter": "persistent_stdio",
+      "concurrency": 16,
+      "runs": 1,
+      "median_rps": 1831.4179755394487,
+      "median_duration_ms": 34.94559999671765,
+      "success_rate": 1
+    },
+    {
+      "adapter": "process_pool",
+      "concurrency": 1,
+      "runs": 1,
+      "median_rps": 1755.8973456830088,
+      "median_duration_ms": 36.44860000349581,
+      "success_rate": 1
+    },
+    {
+      "adapter": "process_pool",
+      "concurrency": 4,
+      "runs": 1,
+      "median_rps": 4625.079499789586,
+      "median_duration_ms": 13.837599981343374,
+      "success_rate": 1
+    },
+    {
+      "adapter": "process_pool",
+      "concurrency": 8,
+      "runs": 1,
+      "median_rps": 5083.11690221868,
+      "median_duration_ms": 12.59070000378415,
+      "success_rate": 1
+    },
+    {
+      "adapter": "process_pool",
+      "concurrency": 16,
+      "runs": 1,
+      "median_rps": 6649.350645168573,
+      "median_duration_ms": 9.625000006053597,
+      "success_rate": 1
+    }
+  ],
+  "faults": [
+    {
+      "case": "http_timeout",
+      "success": true,
+      "duration_ms": 101.00470000179484
+    },
+    {
+      "case": "cooperative_thread_cancel",
+      "success": true,
+      "duration_ms": 103.727700014133
+    },
+    {
+      "case": "process_future_cancel_after_start",
+      "success": true,
+      "duration_ms": 1025.8816999848932,
+      "note": "running ProcessPool task cannot be cancelled cooperatively"
+    },
+    {
+      "case": "http_after_timeout",
+      "success": true,
+      "duration_ms": 2.231699996627867
+    },
+    {
+      "case": "http_crash_restart",
+      "success": true,
+      "duration_ms": 159.24880001693964
+    },
+    {
+      "case": "stdio_restart",
+      "success": true,
+      "duration_ms": 103.37920000893064
+    }
+  ],
+  "meta": {
+    "schema": "strict-runtime-v1",
+    "payload_limits": {
+      "1k": 1,
+      "10k": 10,
+      "100k": 100,
+      "1m": 1000
+    },
+    "concurrencies": [
+      1,
+      4,
+      8,
+      16
+    ],
+    "repeats": 20,
+    "throughput_requests": 64,
+    "persistent_stdio_init_ms": 117.68210001173429,
+    "async_loop_init_ms": 1.1916999937966466,
+    "persistent_http_init_ms": 135.9418999927584,
+    "process_pool_init_ms": 61.90140001126565,
+    "mcp_stdio_init_ms": 786.0136000090279,
+    "mcp_http_init_ms": 30.983699980424717,
+    "driver_peak_rss_bytes": 95252480
+  }
+}

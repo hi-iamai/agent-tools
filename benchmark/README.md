@@ -72,6 +72,10 @@ python benchmark/scripts/mcp_http_bench.py --url http://127.0.0.1:8767/mcp --rep
 # SearXNG and Zoekt are deployed from source in WSL:
 python benchmark/scripts/searxng_bench.py --base-url http://127.0.0.1:8888 --repeats 3 --output benchmark/results/extended/searxng_wsl.jsonl
 python benchmark/scripts/zoekt_bench.py --base-url http://127.0.0.1:6070 --repeats 10 --output benchmark/results/extended/zoekt_wsl.jsonl
+
+# Strict same-engine runtime/transport ablation (run in WSL where MCP SDK works):
+python benchmark/scripts/strict_runtime_bench.py --repeats 20 --throughput-requests 64 --python /path/to/python --output-dir benchmark/results/extended
+python benchmark/scripts/strict_runtime_analyze.py
 python benchmark/scripts/generate_manifest.py
 python benchmark/scripts/extended_analyze.py
 ```
@@ -80,3 +84,7 @@ Linux candidates currently covered by the runner include GNU `find`/`grep`,
 `fd`, `ripgrep`, `ugrep`, `ag`, `git grep`, Python scanning, and SQLite FTS5.
 Keep WSL-on-NTFS and a repository copied into the Linux filesystem as separate
 environments.
+
+The strict runtime benchmark uses one preloaded in-memory engine and one
+response schema across every adapter. Run it in isolation: ports `8770` and
+`8771` must be free, and no other CPU-heavy benchmark should run concurrently.

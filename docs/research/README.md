@@ -28,10 +28,11 @@
 ## 阅读顺序
 
 1. [`agent_tool全景评测报告.md`](agent_tool全景评测报告.md)
-2. [`全面评测计划.md`](全面评测计划.md)
-3. [`扩展评测阶段结果.md`](扩展评测阶段结果.md)
-4. [`phase0_tool_surface_pilot.md`](phase0_tool_surface_pilot.md)
-5. [`tool调研2.md`](tool调研2.md)
-6. [`tool调研.md`](tool调研.md)
+2. [`严格运行形态实验.md`](严格运行形态实验.md)
+3. [`全面评测计划.md`](全面评测计划.md)
+4. [`扩展评测阶段结果.md`](扩展评测阶段结果.md)
+5. [`phase0_tool_surface_pilot.md`](phase0_tool_surface_pilot.md)
+6. [`tool调研2.md`](tool调研2.md)
+7. [`tool调研.md`](tool调研.md)
 
 `agent_tool最终报告.md` 是历史命名，内容属于 Phase 0，不应作为当前最终报告引用。

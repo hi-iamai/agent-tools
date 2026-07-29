@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-29T00:26:28Z",
+  "generated_at_utc": "2026-07-29T02:33:04Z",
   "platform": "Windows-2025Server-10.0.26100-SP0",
   "repo_commit": "5e32c82a5a896e1d942cfc9dd9a2ebbe86741258",
   "repositories": {
@@ -25,7 +25,8 @@
   },
   "environment_notes": {
     "windows": "Windows native",
-    "wsl": "Ubuntu 24.04 WSL1; not a native Linux kernel benchmark"
+    "wsl": "Ubuntu 24.04 WSL1; not a native Linux kernel benchmark",
+    "strict_runtime": "Ubuntu 24.04 WSL1, isolated run, ports 8770/8771, one preloaded in-memory engine"
   },
   "config_sha256": "634091fb4caa4e165bbaf58ae7ad95266cf58bf3d0164c2cc2f0ae25b985b2e1",
   "data_sha256": {
@@ -41,9 +42,9 @@
     "code_intelligence_bench.py": "f4175440d7ba6f575d23936441f1031168a083a4ec20bcffeb669a9c07cafa2b",
     "codeql_meta.py": "7a17524bd95a6b1a5a5ec4130298255601fa621defd71ff0a24bd332b5d691c0",
     "common.py": "11452fe273d3a6862a9ba5f39bcde603cae891d86ce4446d9f6ee66a37b71e5a",
-    "extended_analyze.py": "503764c7cd90cb79007977df3a8452876b65a528861ee3288ef768a0e402e9b9",
+    "extended_analyze.py": "87a16c48246055780630f687c599a2fe87e558e6d753f72dc831efd34e35aea7",
     "extended_search_bench.py": "dee4d2ffbb33760c7d8631606a30924508b49a347a097ce98f740e6180f74881",
-    "generate_manifest.py": "1e2e71811be06f2e2ffb9aad7bbf4063180330d202fd65d7996860ed1fab69c7",
+    "generate_manifest.py": "37037ab0f53b7fcad75db5c2e372efb690b02aa9fcc4974b0d1e686352128284",
     "git_tool_bench.py": "66a4c0674364b02a481a5072ad7732cc908434bd5cda7881d45f007741ab9261",
     "index_lifecycle_bench.py": "ee9d7c258dc8802a8d6cc1f6e58d0efdb1d53404fc81543c9ea862b617bf3744",
     "io_tool_bench.py": "e9b295f6bf49c768a13b234d3bca9269d5684e3306682e910b860d0e2c367ec0",
@@ -65,6 +66,10 @@
     "scip_zoekt_meta.py": "2b7f9040cabed39121d995b53d1338bc5695a7f527826f0b4d74600475341d47",
     "searxng_bench.py": "0317f725d9fc54aedd65bbc584b66df9793f21a4f57cb70735e146f95dd1633c",
     "security_boundary_bench.py": "4e004cd767d0615bab487cf308841250472d91ade5c3ad6e7398540663a1e010",
+    "strict_runtime_analyze.py": "effa8fc8098d7b6d3711ea9313d917004e99d7cff48a69de74ee8efe7f93e04e",
+    "strict_runtime_bench.py": "c91cfc318ea2fe88ad046ed33d2b183cf757b82fd1c7c758a597469f844a0876",
+    "strict_runtime_engine.py": "d849092dba0d953194be367ecc7e4a9e02714777863b5b684de77f00a9ca247d",
+    "strict_runtime_server.py": "684975d6e9c9598720ee59224732617b2fb8695018cc2d1f03572b4c8c46bf56",
     "structure_bench.py": "0c6ca2e7832f5072c3a98f67aa8a9a887436929118c3aff7aad17b838c19d2d3",
     "web_fixture_server.py": "632087450e6e2183a055bda992d551b0d2c30d924a147d845e5a334e32bf90a8",
     "webfetch_bench.py": "d7ffede0cfa7a50bec1745f64e48bcd00a08da17ca50676c9a4be5a4ba8e123f",

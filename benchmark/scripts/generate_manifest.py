@@ -53,6 +53,7 @@ def main() -> None:
         "environment_notes": {
             "windows": "Windows native",
             "wsl": "Ubuntu 24.04 WSL1; not a native Linux kernel benchmark",
+            "strict_runtime": "Ubuntu 24.04 WSL1, isolated run, ports 8770/8771, one preloaded in-memory engine",
         },
         "config_sha256": sha256(BENCH / "config.json"),
         "data_sha256": {
