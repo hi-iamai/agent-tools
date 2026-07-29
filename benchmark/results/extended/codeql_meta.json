@@ -1,0 +1,12 @@
+{
+  "database_create": {
+    "elapsed": "1:37.74",
+    "max_rss_kb": 1907092,
+    "database_bytes": 182935220
+  },
+  "function_query": {
+    "elapsed": "0:32.52",
+    "max_rss_kb": 2957936,
+    "result_rows": 35718
+  }
+}

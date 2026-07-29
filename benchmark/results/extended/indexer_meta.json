@@ -1,0 +1,12 @@
+{
+  "zoekt": {
+    "elapsed": "0:03.00",
+    "max_rss_kb": 411640,
+    "index_bytes": 106499098
+  },
+  "scip_python": {
+    "elapsed": "2:40.43",
+    "max_rss_kb": 4099636,
+    "index_bytes": 83306314
+  }
+}

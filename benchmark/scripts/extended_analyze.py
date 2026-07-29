@@ -195,6 +195,7 @@ def main() -> None:
     resource_rows = []
     security_rows = []
     lsp_rows = []
+    zoekt_rows = []
     for path in base.glob("extended_search_*.jsonl"):
         search_rows.extend(read_jsonl(path))
     for path in base.glob("webfetch_*.jsonl"):
@@ -227,6 +228,8 @@ def main() -> None:
         security_rows.extend(read_jsonl(path))
     for path in base.glob("lsp_*.jsonl"):
         lsp_rows.extend(read_jsonl(path))
+    for path in base.glob("zoekt_*.jsonl"):
+        zoekt_rows.extend(read_jsonl(path))
     summary = {
         "search": summarize_search(search_rows),
         "webfetch": summarize_web(web_rows),
@@ -322,6 +325,21 @@ def main() -> None:
             "p95_query_ms": percentile([x["duration_ms"] for x in lsp_rows], 0.95),
             "error_rate": statistics.mean(bool(x["error"]) for x in lsp_rows),
         }] if lsp_rows else [],
+        "zoekt": [{
+            "runs": len(zoekt_rows),
+            "success_rate": statistics.mean(bool(x["count_match"]) for x in zoekt_rows),
+            "median_query_ms": statistics.median(x["duration_ms"] for x in zoekt_rows),
+            "p95_query_ms": percentile([x["duration_ms"] for x in zoekt_rows], 0.95),
+            "median_raw_bytes": statistics.median(x["raw_bytes"] for x in zoekt_rows),
+        }] if zoekt_rows else [],
+        "indexers": (
+            json.loads((base / "indexer_meta.json").read_text(encoding="utf-8"))
+            if (base / "indexer_meta.json").exists() else {}
+        ),
+        "codeql": (
+            json.loads((base / "codeql_meta.json").read_text(encoding="utf-8"))
+            if (base / "codeql_meta.json").exists() else {}
+        ),
     }
     json_dump(base / "extended_summary.json", summary)
     write_csv(base / "search_summary.csv", summary["search"])
@@ -340,6 +358,7 @@ def main() -> None:
     write_csv(base / "resource_summary.csv", summary["resources"])
     write_csv(base / "security_summary.csv", summary["security"])
     write_csv(base / "lsp_summary.csv", summary["lsp"])
+    write_csv(base / "zoekt_summary.csv", summary["zoekt"])
     print(json.dumps({key: len(value) for key, value in summary.items()}, indent=2))
 
 

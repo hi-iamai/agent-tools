@@ -123,6 +123,19 @@ ast-grep 原始 JSON 仍较大，必须裁剪字段和分页。
 
 当前符号唯一且定义形态简单；LSP references、workspace symbols、alias 和同名消歧仍需扩展。
 
+### 重型代码索引器
+
+| 方案 | 构建/提取时间 | 峰值 RSS | 产物 |
+|---|---:|---:|---:|
+| Zoekt | 3.0s | 402MB | 106.5MB |
+| SCIP Python | 2m40s | 4.0GB | 83.3MB |
+| CodeQL Python database | 1m38s | 1.9GB | 182.9MB |
+
+Zoekt 对三类 literal query 的 Web 查询中位约 2.6～22.2ms，命中数与 oracle 一致。
+CodeQL 自定义全函数查询首次编译/执行约 32.5s、峰值约 2.96GB，返回 35,718 行。
+三者服务的层级不同：Zoekt 是高性能代码搜索，SCIP 是语言无关代码导航索引，CodeQL 是
+重型程序分析数据库，不能仅按查询延迟排名。
+
 ## 6. 本地 WebSearch / 语义检索
 
 固定 8 文档、8 有答案和 1 无答案查询：
@@ -298,13 +311,18 @@ Windows 资源采样：
 | 当前模型原生 Web Search | Provider 明确不支持 |
 | SearXNG | 未部署；需要外部搜索源配置 |
 | LSP references/workspace symbols | 已完成 definition；references/workspace symbols 尚未完成 |
-| SCIP | 尚未安装 indexer |
-| Zoekt | 当前环境无 Go/容器，未部署 |
-| CodeQL | 重型安装未执行 |
-| SWE-bench | 未部署 Docker；当前主机没有 Docker |
+| SCIP | 已完成 Python 索引构建；消费/导航查询尚未实现 |
+| Zoekt | 已完成索引和 literal 查询；symbol/regex 高级查询待扩展 |
+| CodeQL | 已完成 Python database 和自定义函数查询；安全 query suite 未跑 |
+| SWE-bench | Docker 已安装但 WSL1 无法启动 OCI 容器 |
 | 原生 Linux | 当前仅 WSL1 |
 | MCP Streamable HTTP | 仅完成 STDIO |
 | Prompt Injection 红队 | 仅完成命令/路径边界 smoke |
+
+Docker daemon 在 WSL1 中可通过关闭 bridge/iptables 后启动并响应 `docker info`，但
+`runc` 启动最小 `hello-world` 容器时因 WSL1 内核 socket/OCI 限制失败。转换 WSL2 又因
+宿主 Virtual Machine Platform/固件虚拟化不可用而失败。因此依赖容器的 SearXNG 和
+SWE-bench 仍无法在当前机器运行。
 
 ## 16. 数据使用建议
 

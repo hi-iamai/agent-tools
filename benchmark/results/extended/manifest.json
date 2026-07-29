@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-28T18:37:41Z",
+  "generated_at_utc": "2026-07-29T00:08:29Z",
   "platform": "Windows-2025Server-10.0.26100-SP0",
   "repo_commit": "5e32c82a5a896e1d942cfc9dd9a2ebbe86741258",
   "repositories": {
@@ -39,8 +39,9 @@
     "api_fetch_bench.py": "2af8187c536ba0aded30e4c2957c3a4e8a98dbe539d24ede0749e327bf6f22ec",
     "browser_fetch_bench.mjs": "31e20398d2c03db2fe58d0ddc726aa318a5cd6ebd91a1a6967c6f2e2c31b0651",
     "code_intelligence_bench.py": "f4175440d7ba6f575d23936441f1031168a083a4ec20bcffeb669a9c07cafa2b",
+    "codeql_meta.py": "ce95b62700a21c406c152deaea89b7798267ecc1ee9bd73d5dd0d8e0bfab1de0",
     "common.py": "11452fe273d3a6862a9ba5f39bcde603cae891d86ce4446d9f6ee66a37b71e5a",
-    "extended_analyze.py": "15fc03e3af196d3dacf2d7b9221e1ed961a81846d9819f21cbb20961117e8f44",
+    "extended_analyze.py": "d878ac7786284108ec85603ca26ca9d1386bbc0c7dc64119a1d06da3bdc53f31",
     "extended_search_bench.py": "dee4d2ffbb33760c7d8631606a30924508b49a347a097ce98f740e6180f74881",
     "generate_manifest.py": "1e2e71811be06f2e2ffb9aad7bbf4063180330d202fd65d7996860ed1fab69c7",
     "git_tool_bench.py": "66a4c0674364b02a481a5072ad7732cc908434bd5cda7881d45f007741ab9261",
@@ -59,10 +60,12 @@
     "runtime_bench.py": "01db42b69c894d8b7311824455adfd078f3424dd6981d97e1b4dd757d4f074f0",
     "runtime_http_server.py": "80f1de20b12b85095702dc678ac5258ae9066132c791e8bf0b2c463546ebf674",
     "runtime_worker.py": "830f1e6fa5fac22989cdf7c66d75f5e5f075594ad2e1b86e32139524727a1ff9",
+    "scip_zoekt_meta.py": "2b7f9040cabed39121d995b53d1338bc5695a7f527826f0b4d74600475341d47",
     "security_boundary_bench.py": "4e004cd767d0615bab487cf308841250472d91ade5c3ad6e7398540663a1e010",
     "structure_bench.py": "0c6ca2e7832f5072c3a98f67aa8a9a887436929118c3aff7aad17b838c19d2d3",
     "web_fixture_server.py": "632087450e6e2183a055bda992d551b0d2c30d924a147d845e5a334e32bf90a8",
     "webfetch_bench.py": "d7ffede0cfa7a50bec1745f64e48bcd00a08da17ca50676c9a4be5a4ba8e123f",
-    "websearch_bench.py": "e3b0d77cbdc428be96b463df9253ee09288c47241e7946a3095c36af5aef25d2"
+    "websearch_bench.py": "e3b0d77cbdc428be96b463df9253ee09288c47241e7946a3095c36af5aef25d2",
+    "zoekt_bench.py": "6f1b2de9fef67eb22fea3baba779bf7dd32a09e6af240144e2e08ed496aa63be"
   }
 }

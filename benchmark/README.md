@@ -55,6 +55,8 @@ node benchmark/scripts/browser_fetch_bench.mjs --repeats 3 --environment windows
 python benchmark/scripts/structure_bench.py --repeats 3 --environment windows --output-dir benchmark/results/extended
 python benchmark/scripts/code_intelligence_bench.py --repeats 2 --environment windows --output-dir benchmark/results/extended
 python benchmark/scripts/lsp_bench.py --repeats 3 --output-dir benchmark/results/extended
+# Zoekt, SCIP Python, and CodeQL are exercised from WSL; see the panoramic
+# report for installation commands, build costs, and environment limitations.
 python benchmark/scripts/index_lifecycle_bench.py --output-dir benchmark/results/extended
 python benchmark/scripts/runtime_bench.py --repeats 3 --environment windows --output-dir benchmark/results/extended
 python benchmark/scripts/git_tool_bench.py --repeats 5 --environment windows --output-dir benchmark/results/extended

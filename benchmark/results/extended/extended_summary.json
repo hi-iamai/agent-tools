@@ -10979,5 +10979,38 @@
       "p95_query_ms": 200.6407800057782,
       "error_rate": 0
     }
-  ]
+  ],
+  "zoekt": [
+    {
+      "runs": 30,
+      "success_rate": 1,
+      "median_query_ms": 9.793200006242841,
+      "p95_query_ms": 34.867449993907904,
+      "median_raw_bytes": 22244.0
+    }
+  ],
+  "indexers": {
+    "zoekt": {
+      "elapsed": "0:03.00",
+      "max_rss_kb": 411640,
+      "index_bytes": 106499098
+    },
+    "scip_python": {
+      "elapsed": "2:40.43",
+      "max_rss_kb": 4099636,
+      "index_bytes": 83306314
+    }
+  },
+  "codeql": {
+    "database_create": {
+      "elapsed": "1:37.74",
+      "max_rss_kb": 1907092,
+      "database_bytes": 182935220
+    },
+    "function_query": {
+      "elapsed": "0:32.52",
+      "max_rss_kb": 2957936,
+      "result_rows": 35718
+    }
+  }
 }
